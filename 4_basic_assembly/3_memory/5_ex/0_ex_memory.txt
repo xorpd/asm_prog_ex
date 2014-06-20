@@ -1,0 +1,15 @@
+Basic Assembly
+================
+
+Memory
+------
+
+Memory exercises
+@@@@@@@@@@@@@@@@
+
+Welcome to the memory exercises section.
+The exercises contain two parts: Code reading and Code writing.
+Begin with the Code reading, and later move on to the Code writing.
+
+Have fun :)
+

@@ -1,0 +1,91 @@
+x86 Architecture
+================
+
+First instructions
+------------------
+Welcome to the first exercises regarding writing actual code!
+There are two parts for the exercises: Reading code and writing code. There are
+a few bonus exercises in the second section, they are not mandatory.
+
+Except for the bonus exercises, make sure that you do all the exercises, to make
+sure that you understand the material from the lecture. It should also help you
+remember the instructions' names and the register's names.
+
+This time you may use a calculator at any point, if you wish to.
+
+
+Read some code
+@@@@@@@@@@@@@@
+
+0.  You are given the initial values of the following registers:
+    eax = 0x00000011 , ebx = 0x1234ABCD , ecx = 0x5151DEAD
+
+    Find out the final values of eax, ebx and ecx after running the following
+    instructions:
+
+    mov   ah,5Bh
+    mov   cx,0BEEFh
+    mov   ebx,ecx
+    mov   ah,bl
+
+
+1.  The initial value of eax is 0x1. What is the value of eax after running the
+    following instructions?
+
+    add   eax,1
+    add   eax,eax
+    add   eax,eax
+
+
+2.  The initial value of eax is 0x5. What is the value of eax after running the
+    following instructions?
+
+    mov   ecx,eax
+    add   ecx,ecx
+    add   ecx,eax
+    add   ecx,3h
+    mov   eax,ecx
+
+
+3.  What does the following piece of code does? Assume that the input of this
+    code is eax, and the output is eax.
+
+    mov   edx,eax
+    add   edx,edx
+    add   edx,edx
+    add   edx,edx
+    sub   edx,eax
+    mov   eax,edx
+
+
+Write some code
+@@@@@@@@@@@@@@@
+
+4.  Assume that you are given values in eax,ebx,ecx. Write code that adds the
+    values inside all those registers, and stores the final result inside edx.
+
+
+5.  Bonus: Write a piece of code that copies the number inside al (Only 8 bits)
+    into whole edx, so that the value inside edx will be equal to the value
+    inside the original al. Hint: You will have to somehow pad with zeroes the
+    original value.
+
+    Example: Assume that Initially eax = 0x153BCF19. When your code will end its
+    running, I expect that edx = 0x00000019
+
+
+6.  Bonus: Assume that you are given values in eax,ecx. Write a piece of code
+    that calculates 5*eax + 3*ecx + 1, and stores the result inside eax. (*
+    means multiplication here).
+
+
+7.  Bonus: You are given eax = 0x1. Could you zero eax using only ADD
+    instructions? What is the lowest number of ADD instructions that you need to
+    use to acheive that result.
+
+
+8.  Bonus: Could you calculate eax * eax (eax times eax) using only MOV,ADD,SUB
+    instructions?
+
+
+Happy thinking :)

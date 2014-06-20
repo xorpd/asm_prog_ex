@@ -1,0 +1,21 @@
+Basic Assembly
+================
+
+Bitwise operations
+------------------
+
+Practical bit games
+@@@@@@@@@@@@@@@@@@@
+
+Welcome to the Practical bit games exercises section.
+
+There are two parts: Code reading and Code writing. Begin with the code reading.
+
+Particularly, make sure that you take a look at 1_read_code_intro first. That
+folder contains explanation about the new subroutine print_eax_binary. It also
+explains about the include directive, and it contains a code template to be used
+from now on, called print_eax_binary_included.asm.
+
+Only when you finish with the code reading, move on to some code writing.
+
+Have fun :)

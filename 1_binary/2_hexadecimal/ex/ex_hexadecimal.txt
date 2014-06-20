@@ -1,0 +1,93 @@
+Base 2
+======
+
+Base 16 exercises
+------------------
+
+Hello! Some Base 16 related exercises are included here. As usual, the first
+exercises are a bit easy (And might be boring), however it is very important
+that you do those if you want to do the next ones, and especially if you want to
+understand the rest of the course. We are going to use base 16 everywhere in
+this course.
+
+To make sure that you understand things right, Use a calculator from time to
+time to check your answers. The Windows calculator (When in Programmer mode) has
+the feature of changing the base of the current number. It has the built in
+options of Hex, Dec, Oct(Octal - base 8) and Bin. Use those to check your
+answers.
+
+Although you could use a calculator or a computer to solve the simpler
+exercises, make sure that you do them with a pen and a paper.
+
+
+0.  Convert the following numbers to binary:
+
+  0.0   0xD = {?}_2
+  
+  0.1   0xF = {?}_2
+
+  0.2   0x3A = {?}_2
+
+  0.3   0x4532 = {?}_2
+
+  0.4   0x9A9B = {?}_?
+
+
+1. Convert the following binary numbers to base 16:
+  
+  1.0   {10}_2 = {?}_16
+
+  1.1   {110}_2 = {?}_16
+
+  1.2   {1011}_2 = {?}_16
+
+  1.3   {11110101}_2 = {?}_16
+
+  1.4   {1111100}_2 = {?}_16
+
+  1.5   {1010101111001101}_2 = {?}_16
+
+
+2. Convert the following numbers (Pay attention to the wanted result base):
+
+  2.0   {10110}_2 = {?}_8
+
+  2.1   {1100111}_2 = {?}_8
+
+  2.2   {101001}_2 = {?}_4
+
+  2.3   {3725}_8 = {?}_2
+
+  2.4   {57137}_8 = {?}_4   (Hint: Try to use base 2 as a mediator.)
+
+
+3.  Think of an easy way to convert numbers from base 16 to base 4, and vice
+    versa.
+
+
+4.  Basic divisibility rules:
+
+  4.0   How could you check if a number represented in base 16 is divisible by
+        2?
+
+  4.1   Bonus: How could you check if a number represented in base 16 is
+        divisible by 4? By 8?
+
+
+*5*.Bonus: How could you check if a number represented in base 16 is divisible
+    by 3? And by 15? Could you think of another interesting divisibility rule?
+
+
+6.  Bonus: It is known that a number x has n digits when it is represented in
+    base 4. How many digits will x have when it is represented in base 8?
+
+
+7.  Bonus: 
+    Required: Basic familiarity with the notion of complexity.
+
+    What is the computational complexity of the new hex to binary
+    conversion algorithm we learned about in this lesson? Is it faster than
+    using the Remainder Evaluation method?
+
+
+Happy thinking :)

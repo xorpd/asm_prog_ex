@@ -1,0 +1,169 @@
+Basic Assembly
+==============
+
+Bitwise operations
+------------------
+
+Introduction to boolean algebra
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Welcome to the "Introduction to boolean algebra" exercises section.
+We use the following symbols in this exercise:
+
+V - OR
+^ - AND
+¬ - NOT
++ - XOR
+
+
+0.  Calculate the following expressions:
+
+    0.0   ¬0
+    0.1   (¬0)^1
+    0.2   (0^1)V(¬0)
+    0.3   0V1V0V0
+    0.4   1+1
+    0.5   ((¬1)^(0V1))V((¬0)^(1^1))
+    0.6   (0+1)^(1+0)
+
+
+1.  Build truth tables and Venn diagrams for the following expressions:
+
+    1.0   (¬a)Va
+    1.1   (¬a)^a
+    1.2   (¬a)^b
+    1.3   aVbVc
+    1.4   ((¬a)^b)V((¬b)^a)
+    1.5   ¬((¬a)V(¬b))
+
+
+2.  Basic properties:
+    Prove the following statements. This could be done, for example, using Truth
+    tables.
+
+    2.0   OR's Associative law: aV(bVc) = (aVb)VC
+    2.1   Distributive law: aV(b^c) = (aVb)^(aVc)
+    2.2   De Morgan's law: aVb = ¬((¬a)^(¬b))
+    2.3   XOR's associative law: (a+b)+c = a+(b+c)
+    2.4   AND and XOR distributive law: a^(b+c) = (a^b)+(a^c)
+
+
+3.  Representing operators using other operators.
+    
+    3.0   How could you represent a^b using the ¬ and V operators?
+          How could you represent aVb using the ¬ and ^ operators?
+
+    3.1   Representing ¬:
+      3.1.0   Show that in any expression that contains only the operators ^ and
+              V, if all the variables are 0 then the result is 0.
+
+      3.1.1   Prove that ¬a could not be represented using only the ^ and V
+              operators.
+
+
+4.  Bonus: Disjunctive normal form.
+
+    4.0   Create an expression E(a,b) with the variables a,b and with the
+          operators ^,V,¬ that has the following property: E(a,b) = 1 only if
+          a=0 and b=1. (It is 0 otherwise).
+
+    4.1   Create an expression T(a,b,c) with the variables a,b,c that has the
+          following property: T(a,b,c) = 1 only if a=1,b=0,c=1.
+
+    4.2   Create an expression G(a,b,c,d) with the variables a,b,c,d that has
+          the following property: G(a,b,c,d) = 1 only if a=0,b=1,c=1,d=0.
+
+    4.3   Describe how to create an expression Q(a_1,a_2,...,a_s) that
+          has the following property: Q(a_1,a_2,...,a_s) = 1 only if a_1=k_1,
+          a_2=k_2 , ... , a_s=k_s for some constant bits k_1,...,k_s.
+
+    4.4   Every operator L(a_1,a_2,...,a_s) with variables a_1,...,a_s has a
+          truth table that could be calculated for every assignment of values
+          into the variables a_1,...,a_s.
+
+          Given the truth table of the operator L, infer how to create an
+          expression that equals the operator L for every choice of values for
+          a_1,...,a_s.
+
+    4.5   Conclude that ^,V,¬ could be used to represent any possible boolean
+          operator.
+
+          Infer using 3.0 that either {^,¬} or {V,¬} would be enough.
+
+
+5.  The XOR operator.
+
+    5.0   Show that ¬x = x+1
+
+    5.1   Find 5 bits a_1,a_2,a_3,a_4,a_5 such that each bit a_i equals to the
+          XOR of the rest of the bits.
+
+          Bonus:  Could you do the same for any n bits? 
+                  How many such sets of n bits exist?
+
+    5.2   Find a representation for aVb using the operator ^, the operator +
+          (XOR) and the bit 1.
+
+          HINT: Use the solution of question 5.0.
+
+    5.3   Infer that every expression that can be represented using V,^,¬ could
+          be represented using +(XOR),^ and the number 1.
+
+          Bonus: Show (Using the distributive property of XOR and AND) that we
+          need at most one instance of the number "1" in such expression.
+
+    5.4   Find all the solutions to the following set of equations, in a,b,c.
+          Note that each solution (a,b,c) that you find should satisfy all the
+          three equations at the same time.
+
+          (Recall that here + means XOR)
+          
+          a + b = 1
+          b + c = 1
+          a + c = 0
+
+
+6.  Simplify the following expressions:
+    You may use any of the laws that we have learned about, use truth tables,
+    Venn diagrams or even try to guess.
+
+    You can use Truth tables to make sure that your answer is correct.
+
+    
+    6.0   (a^b)V(aVb)
+
+    6.1   (aVb)^(¬((¬a)^(¬b)))
+
+    6.2   (¬((a^b)V(¬c)))+c
+
+    6.3   (b^(¬(a^b)))Va
+
+
+7.  Bonus: The NAND operator.
+    
+    We define the binary operator NAND as following:
+    a NAND b = ¬(a^b)
+    (NAND is a shorthand for NOT AND).
+
+    7.0   Write a truth table for the NAND operator.
+
+    7.1   Find a way to represent ¬a only using the NAND operator.
+
+    7.2   Find a way to represent a^b only using the NAND operator.
+
+    7.3   As in 4, Conclude that the NAND operator could be used to represent
+          any boolean operator.
+
+
+8.  Bonus: Counting boolean operators.
+
+    8.0   How many possible boolean operators are there which have one bit
+          argument, and one bit output?
+
+          How many are there with two bit arguments, and one bit output?
+
+    8.1   How many possible boolean operators with k arguments and one bit
+          output exist?
+
+
+Have fun :)

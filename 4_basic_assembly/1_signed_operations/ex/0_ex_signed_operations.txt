@@ -1,0 +1,14 @@
+Basic Assembly
+================
+
+Signed Operations
+-----------------
+
+Welcome to the Signed Operations exercises section.
+This exercise has two parts: Code reading and Code writing.
+
+In the Code reading section you will see some examples of using the new sign
+aware instructions that we have learned. In the Code writing section will could
+write some code yourself.
+
+Have fun :)

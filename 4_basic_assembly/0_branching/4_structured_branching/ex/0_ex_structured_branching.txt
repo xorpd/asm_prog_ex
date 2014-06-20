@@ -1,0 +1,18 @@
+Basic Assembly
+================
+
+Structured Branching
+---------------------
+
+Welcome to the Structured Branching exercises section.
+This exercise has three parts: Code reading, Code writing and Code fixing.
+
+Do the Code reading first. It will show you examples of structured branching
+patterns. Then move on to the Code Writing section, where you are going to write
+some code yourself. Finally, you will have the opportunity to fix some spaghetti
+code yourself.
+
+Pay attention to the different patterns of structured branching: IF conditionals
+and LOOPS.
+
+Have fun :)

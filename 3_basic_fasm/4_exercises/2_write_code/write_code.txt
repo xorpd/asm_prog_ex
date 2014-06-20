@@ -1,0 +1,34 @@
+Basic fasm
+==========
+
+Write Code
+----------
+
+In the following exercises you will be asked to write actual programs that
+execute some work over given inputs and produce outputs.
+Use the first_program.asm template to be able to receive numeric input and
+produce numeric output. 
+
+You can just copy the first_program.asm file and use it as a starting point for
+any of your solutions to the following exercises.
+
+For every program that you write, make sure that it passes the assembly
+process successfuly, and then try to run it to make sure that it behaves as
+expected.
+
+
+
+0.  Write a program the receives three numbers and sums those three numbers.
+    Then output the result.
+
+
+1.  Write a program that receives two numbers a,b and calculates their integral
+    average.
+
+
+2.  Write a program that receives a number x as input, and outputs to the
+    console the following values: x+1, x^2 , x^3, one after another.
+
+
+3.  Write a program that receives two numbers a,b as input, and outputs the
+    remainder of dividing a by b.

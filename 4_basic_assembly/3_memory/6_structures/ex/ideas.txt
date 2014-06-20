@@ -1,0 +1,36 @@
+19.3.2014
+
+Ideas for read code:
+
+- (Bathrooms) Get two values as input, which represent a point.
+  Then find the closest point out of all the points in a predefined array.
+  -- done.
+
+- (Vector Adder) Adds two 2 dimensional vectors.
+
+- Segments intersection:
+  Get a number n and then n segments (Pairs of numbers).
+  Output the intersection of all the segments.
+
+  At all times I will keep the intersection in memory, using a struct.
+
+- structs and unions playground: Show strange things with the labels, to make
+  sure that the reader understands what really happens with the labels.
+  - What is the size of the following structure (Contains unions inside).
+  -- done.
+
+
+Ideas for write code:
+
+- Read 4 coordinates to define a rectangle (twice), and find out which rectangle
+  has a larger area.
+
+- Read 4 coordinates twice, and find out if the two rectangles intersect.
+
+- Lexicographic sort of points.
+
+- 
+
+--------------------------------
+
+

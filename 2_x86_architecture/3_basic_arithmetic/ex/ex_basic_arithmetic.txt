@@ -1,0 +1,105 @@
+x86 Architecture
+================
+
+Basic Arithmetic
+----------------
+Hi and welcome to the basic arithmetic exercises page.
+There are two parts: Reading code and writing code. Both of those have easier
+and harder exercises. The Bonus ones are not mandatory.
+
+At this stage we only write the programs inside a text file, and we don't run
+them yet. Don't worry, we are soon going to have some running code :)
+
+Make sure to do those exercises, to make sure that you get a good hold of the
+INC,DEC,MUL,DIV instructions. We are going to use those instructions a lot in
+the forthcoming lessons.
+
+
+Read some code
+@@@@@@@@@@@@@@
+
+0.  Assume that the value of eax is 0x3. What is the new value of eax after the
+    execution of the following instructions:
+
+    inc   eax
+    dec   eax
+    inc   eax
+    inc   eax
+
+
+1.  Assume that initially:
+    edx = 0x17, eax = 0x3, esi=0x7
+    What are the new values of edx,eax,esi after the execution of the following
+    instructions:
+
+    mul   esi
+    mul   esi
+    mul   si
+
+
+2.  Given that:
+    edx = 0x0, eax = 0x1A, ecx = 0x3,
+    What are the new values of edx,eax,ecx after the execution of the following
+    instruction:
+
+    div   ecx
+
+
+3.  Given that edx = 0x0, eax=0xAAD, ecx = 0x0,
+    What is going to happen as a result of the execution of the following
+    instruction:
+
+    div   cx
+
+    Why?
+
+
+4.  Read the following code and answer the questions:
+
+  4.0   What does this piece of code do?
+  
+        mov   ecx,eax
+        mul   ecx
+
+  4.1   Bonus: What does this piece of code do? (Input: eax, Output: eax)?
+
+        mov   ecx,eax
+        mul   ecx
+        mov   esi,eax
+        add   ecx,ecx
+        add   esi,ecx
+        inc   esi
+        mov   eax,esi
+
+        - Could you do the same using less instructions?
+        - What happens if eax is very large?
+
+  4.2   Bonus: What does this piece of code do? (Input: eax, Output: eax)?
+        
+        mov   ecx,eax
+        inc   eax
+        dec   ecx
+        mul   ecx
+
+
+Write some code
+@@@@@@@@@@@@@@@
+
+5.  
+  5.0   Write a piece of code that multiplies the numbers 1,2,3,4,5, and stores
+        the result inside eax.
+
+  5.1   Write a similar piece of code which multiplies the numbers 1,2,...,10
+        and stores the result inside eax.
+
+
+6.  You are given three numbers eax=a, ebx=b, ecx=c. Write a piece of code that
+    calculates their average (a+b+c)/3, and stores it into eax.
+
+
+7.  Bonus: You are given eax=a, ebx=b. Calculate (a^3)*b + 5*(b^2), and store
+    the result inside eax. (Here * means multiplication, and c^d means c to the
+    power of d).
+
+
+Happy thinking :)

@@ -1,0 +1,14 @@
+Basic Assembly
+================
+
+Strings
+-------
+
+Strings exercises
+@@@@@@@@@@@@@@@@@
+
+Welcome to the Strings exercises section.
+The exercises contain two parts: Code reading and Code writing.
+Begin with the Code reading, and later move on to the Code writing.
+
+Have fun :)

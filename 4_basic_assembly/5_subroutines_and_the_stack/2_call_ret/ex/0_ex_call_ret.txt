@@ -1,0 +1,14 @@
+Basic Assembly
+================
+
+Subroutines and the stack
+-------------------------
+
+CALL and RET Exercises
+@@@@@@@@@@@@@@@@@@@@@@
+
+Welcome to the CALL and RET exercises section.
+The exercises contain two parts: Code reading and Code writing.
+Begin with the Code reading, and later move on to the Code writing.
+
+Have fun :)

@@ -1,0 +1,173 @@
+Basic Assembly
+================
+
+Bitwise operations - Practical bit games
+----------------------------------------
+
+Write code
+@@@@@@@@@@
+
+In the following exercises you will be asked to write actual programs that
+execute some work over given inputs and produce outputs.
+Use the print_eax_binary.asm file as a template to be able to receive numeric
+input and produce numeric output, both as hex or binary.
+
+You can just copy the print_eax_binary.asm file and use it as a starting point
+for any of your solutions to the following exercises.
+
+For every program that you write, make sure that it passes the assembly
+process successfuly, and then try to run it to make sure that it behaves as
+expected.
+
+
+0.  Even or Odd:
+
+    0.0   Write a program that takes a number x as input, and returns:
+          - 0 if x is even.
+          - 1 if x is odd. 
+
+    0.1   Write a program that takes three numbers x,y,z as input, and returns:
+          - 0 if (x+y+z) is even.
+          - 1 if (x+y+z) is odd.
+
+          (Note that here + means arithmetic addition).
+          Do it without actually adding the numbers.
+          HINT: Use the XOR instruction.
+
+
+1.  Bit counting:
+    
+    Write a program that takes a number (of size 4 bytes) x as input, and then
+    counts the amount of "1" bits in even locations inside the number x. We
+    assume that the rightmost bit has location 0, and the leftmost bit has a
+    location of 31.
+
+    Example:
+      
+      if x == {111011011}_2, then we only count the bits with stars under them.
+               * * * * *
+               8 6 4 2 0 
+
+      Hence we get the result of 4.
+
+
+2.  Bit reverse:
+
+    Write a program that takes a number (of size 4 bytes) x as input, and then
+    reverses all the bits of x, and outputs the result. By reversing all bits we
+    mean that the bit with original location i will move to location 31-i.
+
+    Small example (for the 8 bit case):
+
+      if x == {01001111}_2, then the output is {11110010}_2.
+
+      In this example we reversed only 8 bits. Your program will be able to
+      reverse 32 bits.
+
+
+3.  Sum of distances:
+    
+    For a binary number x, we define the "sum of 1 distances" to be the sum of
+    distances between every two "1" bits in x's binary representation.
+
+    Small example (8 bits):
+
+      x = {10010100}_2
+           7  4 2
+      
+      The total sum of distances: (7-4) + (7-2) + (4-2) = 3 + 5 + 2 = 10
+
+
+    Create a program that takes a number x (of size 4 bytes) as input, and
+    outputs x's "sum of 1 distances".
+
+
+4.  Rotation using shifts.
+
+    Implement the ror instruction using the shift instructions. You may use any
+    bitwise instruction for this task, except for the rotation instructions
+    (ror,rol).
+
+
+5.  Rotation overflow.
+
+    The ror/rol instructions receive two arguments: dest and k. k is the amount
+    of bit locations we rotate. (k=1 means rotate one bit location).
+
+    What happens if k is larger than the size of the argument? For example, what
+    would the following instructions do:
+
+    5.0   ror   eax,54d
+
+    5.1   rol   bx,19d
+
+    5.2   ror   dh,10d
+
+    5.3   mov   cl,0feh
+          ror   edx,cl
+
+    5.4   ror   eax,1001d
+
+    For each of those instructions:
+    - Check if it assembles.
+    - Write some code that includes that instruction, and find out what it does.
+    
+
+6.  Bonus: Identifying powers of two.
+    
+    6.0   Find the binary representation of the following numbers:
+          1,2,4,8,16,32 (Decimal representation).
+          What do all those binary representations have in common?
+
+    6.1   Write a program that takes a number x and finds out if this number is
+          a power of 2. It outputs 1 if the number is a power of 2, and 0
+          otherwise.
+
+    6.2   Try to write that program again, this time without any loops.
+          
+          HINT: try to decrease the original number by 1.
+
+
+7.  Bonus: Convert Gray into binary.
+    
+    In the "Gray" Exercise at the code reading section, we have learned that in
+    order to find the Gray code of a number x, we should shift the number x by
+    1, and xor the result with the original x value.
+
+    In high level pseudo code: 
+      (x >> 1) XOR x.
+
+    In assembly code:
+      mov   ecx,eax
+      shr   ecx,1
+      xor   eax,ecx
+
+
+    Find a way to reconstruct x from the expression (x >> 1) XOR x.
+    Write a program that takes a gray code g as input, and returns the
+    corresponding x such that g = (x >> 1) XOR x.
+
+    NOTE that You may need to use a loop in your program.
+
+
+8.  Bonus: Addition using bitwise operations.
+
+    8.0   You are given two bits a,b. Show that their arithmetic sum is of the
+          form (a AND b, a XOR b).
+
+          Example:
+
+          1 + 0 = 01
+          And indeed: 0 = 1 AND 0, 1 = 1 XOR 0.
+
+
+    8.1   Write a program that gets as inputs two numbers x,y (Each of size 4
+          bytes), and calculates their arithmetic sum x+y using only bitwise
+          instructions. (ADD is not allowed!).
+
+          HINT: Try to divide the addition into 32 iterations.
+                In each iteration separate the immediate result and the carry
+                bits that are produced from the addition.
+
+
+Happy coding :)

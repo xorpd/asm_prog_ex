@@ -1,0 +1,61 @@
+1.4.2014
+
+CALL and RET exercises ideas
+
+Intro
+-----
+- local labels.
+- Checking that the stack is balanced.
+
+Read code
+---------
+
+- (Fair and Square) Function for printing a rectangle (Made of stars).
+  - Will contain a function for a line.
+  -- done.
+
+- (Catapult) Playground: Using ret to jump.
+  -- done.
+  
+
+- (Vec sum) Function for adding vectors?
+  -- done.
+
+- Recursion (Bonus?)
+  - Increasing one number.
+    -- done. (rec adder).
+  - Fibonacci. (Bonus).
+
+
+Write code
+----------
+
+- Random picture: Write a function that takes an integer in eax, and prints to
+  the screen stars according to the bit representation of eax.
+  Every two bits will become a symbol, so we will have a picture of 4X4.
+
+  Function for getting the symbol.
+
+  Function for taking the number and filling in some buffer.
+
+  print the picture.
+
+  -- done. (Dword picture.)
+
+
+- Write a function that checks if a number is prime.
+  Calculate the amount of primes until the number n.
+  How many primes are there from 1 to n?
+  -- done (Prime counting)
+
+- Nested: 
+    - Write a function to calculate a^x.
+    - Write a function to calculate the remainder of : (a^x - b^x)/(a-b)
+    - Write a function that iterates over all the number a<=k,b<=m of size
+      words, and find the maximum remainder.
+    - Call this function with arguments 100h,100h
+
+
+- Playground: Use call to find the value of eip.
+  -- done (Find yourself)
+

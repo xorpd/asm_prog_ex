@@ -1,0 +1,177 @@
+Base 2
+======
+
+Base conversion exercises
+--------------------------
+
+Hey, some Base conversion exercises are included here. The first ones are pretty
+usual, and could be dull at times, but please do them if this is your first time
+with base 2. Also, make sure that you do them with a pen and a piece of paper. I
+can't emphasize it more, you got to get the feeling through the hands, at least
+on the first time.
+
+As you move on with the exercises there are some that require more thinking.
+As usual, anything marked with *Bonus* is not required for you to understand the
+following material, however it will probably make you smarter.
+
+
+0.  Binary to Decimal conversion. Convert the following numbers to base 10:
+
+    You may use a calculator if you feel like it, however please don't use the
+    built in conversion function. 
+
+    It is important that you do this yourself, to make sure that you get the
+    feeling of it. Some things could only be learned through the hands.
+
+  
+  0.0   {10}_2 = ?
+
+  0.1   {100}_2 = ?
+
+  0.2   {101}_2 = ?
+
+  0.3   {1001110}_2 = ?
+
+  0.4   {100110011}_2 = ?
+
+  0.5   {111111}_2 = ?
+
+  0.6   {1000}_2 = ?
+
+  0.7   {10000}_2 = ? (Bonus: Could you guess this one? How?)
+
+
+1.  Decimal to Binary conversion. Convert the following numbers to base 2:
+
+  1.0   {2}_10 = ?
+
+  1.1   {5}_10 = ?
+
+  1.2   {83}_10 = ?
+
+  1.3   {134}_10 = ?
+
+  1.4   {128}_10 = ?
+
+  1.5   {63}_10 = ?
+
+  1.6   {256}_10 = ? (Bonus: Could you guess this one? How?)
+
+
+2.  Conversion between various bases and 10:
+
+    Make sure that you pick a smart method to do the conversion in the following
+    exercises :)
+
+  2.0   {2312}_5 = {?}_10 ?
+
+  2.1   {10120}_3 = {?}_10 ?
+
+  2.2   {121}_10 = {?}_3 ?
+
+  2.3   {121}_10 = {?}_6 ?
+
+
+3. Conversion between two arbitrary bases.
+  
+    Convert the following numbers' representations.
+
+    Hint: Given that you know how to convert to base 10 and from base 10 easily,
+    you could just use base 10 as a mediator base.
+
+    Example: {102}_3 = {?}_5 ?
+
+    Solution:
+    First we convert from base 3 to base 10. 
+    We use Direct Evaluation method:
+
+    {102}_3 = 2*3^0 + 0*3^1 + 1*3^2 = 2 + 0 + 9 = {11}_10
+
+    Now we want to convert the result from base 10 to base 5. We use the
+    Remainder Evaluation method:
+
+    11 |  1    11 % 5 = 1
+     2 |  2     2 % 5 = 2
+
+    We obtain the number {21}_5. Hence {102}_3 = {21}_5
+
+  3.0   {10010}_2 = {?}_5 ?
+
+  3.1   {102}_3 = {?}_2 ?
+
+  3.2   {11011}_2 = {?}_3 ?
+
+  3.3   {1402}_5 = {?}_2 ?
+
+
+4.  Bonus: For the mathematically inclined:
+    (I still recommend you to at least read this. You might find it
+    interesting.)
+
+  4.0 Existence of representation: 
+
+      During the presentation we implicitly assumed that there is a
+      representation in base 2 for every number that could be represented in
+      base 10. How could you prove it?
+
+      Generally, how could you prove that using base b for some b > 1, every
+      integral quantity could be represented in base b?
+
+  4.1 Uniqueness of representation:
+
+      During the representation we mentioned that every quantity could be
+      represented in a unique way in base 2. That means: Every quantity could be
+      represented as a sum of distinct powers of 2 in a unique way. prove it.
+
+      Generally: Let b be some base for b > 1. Show that for any quantity
+      q, there is only one way to represent q in base b.
+
+      Hint for b=2:
+      Assume that there are two different representations as sums of distinct
+      powers of 2 for the same quantity q. Then we get:
+      2^(a_0) + 2^(a_1) + ... = q = 2^(b_0) + 2^(b_1) + ...
+      Cancel the similar terms from the two sides of the equation, and try to
+      understand if equality is possible.
+
+
+5. Bonus: Symmetry of bases:
+
+  5.0 We now know that there is nothing special about base 10. Why then do we
+      use it as a mediator in Question 3, instead of converting directly between
+      two arbitrary bases?
+
+  5.1 Once in a lifetime experience: Try to convert the number
+      {1241}_5 into base 3 directly, without using base 10 as a mediator. (Use
+      your mind, a pen and a paper).
+
+
+6. Bonus: Divisibility by interesting numbers.
+
+  6.0 How could you check if a binary represented number is divisible by 2?
+      And By 4? Could you generalize it?
+
+  *6.1* How could you check if a binary represented number is divisible by 3?
+
+
+7. Bonus: Complexity of conversion algorithms.
+   Required: Basic understanding of what is complexity.
+
+   It might be interesting to find out how fast do the base conversion
+   algorithms work. 
+
+   For example: looking at the execution of the Direct Evaluation method while
+   converting a number n from base b to base c: The algorithm iterates over all
+   the digits of the number n, and invokes one addition operation and one
+   exponentiation for every digit. A total of about O(log{b}(n)) operations.
+
+   In this context we choose basic operations to be addition, subtraction,
+   division and exponentiation.
+   
+  7.0 What is the amount of basic operations it takes to run the "Finding
+      largest power" method?
+  
+  7.1 What is the amount of basic operations it takes to run the "Remainder
+      evaluation" method?
+
+
+Happy thinking :)

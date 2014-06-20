@@ -1,0 +1,13 @@
+Becoming Independent
+====================
+
+Debugging
+---------
+
+Welcome to the debugging exercises section.
+You will find here a few exercises that involve using the debugger, both for
+solving errors in a program, or understanding how a program works.
+
+Go ahead and begin with the debug_code section.
+
+Have fun :)

@@ -1,0 +1,171 @@
+Base 2
+======
+
+Signed Numbers
+--------------
+Welcome to the exercises page for signed numbers!
+
+Some ten's complement and two's complement exercises are included. The first
+exercises are a bit easier, though it is very important that you do those with a
+pen and paper, just to make sure that you understand everything.
+
+The next exercises are not mandatory, and could deepen your understanding about
+signed numbers. I recommend to take a look at them.
+
+Make sure to check yourself from time to time using a calculator. The windows
+calculator for example has the feature of representing signed numbers. Try to
+eliminate the usage of a calculator to the minimum using the actual solving of
+the questions. I recommend that you don't use it at all.
+
+
+The ten's complement
+@@@@@@@@@@@@@@@@@@@@
+
+0.  Find the ten's complement of the following numbers:
+    (Note: All numbers here are in base 10)
+
+  0.0   18  (When living in the world of 2 decimal digits).
+
+  0.1   25  (When living in the world of 3 decimal digits).
+
+  0.2   131 (When living in the world of 3 decimal digits).
+
+
+1.  Solve the following using the ten's complement method:
+    (Note: We are working in base 10 here.)
+    Hint: Change the subtrahend to its ten's complement form.
+          Make sure to fix the amount of decimal digits being used.
+
+  1.0   35 - 6 = ?
+
+  1.1   111 - 17 = ?
+
+  1.2   425 - 296 = ?
+
+  1.4   6312 - 4129 = ?
+
+
+The two's complement
+@@@@@@@@@@@@@@@@@@@@
+
+2.  Find the two's complement of the following binary numbers:
+    (Note: All numbers here are in base 2):
+
+  2.0   {1001}_2  (In the world of 4 bits).
+
+  2.1   {1110}_2  (In the world of 5 bits).
+
+  2.2   {1}_2     (In the world of 8 bits).
+
+  2.3   {11001100}_2  (In the world of 8 bits).
+
+
+3.  Solve the following using the two's complement method:
+    Hint: Change the subtrahend to its two's complement form.
+          Make sure to fix the amount of bits used.
+  
+  3.0   {1101}_2 - {1001}_2 = ?
+
+  3.1   {1010111}_2 - {100110}_2 = ?
+
+  3.2   {10111}_2 - {1100}_2 = ?
+
+4.  Find the signed form (two's complement) of the following decimal numbers:
+    Fix the number of bits to be 8.
+
+  4.0   125
+
+  4.1   -15
+
+  4.2   5
+
+  4.3   127
+
+  4.4   -65
+
+
+5.  Transform the following decimal exercises into the binary two's complement
+    form, solve it using the binary form, and convert it back to
+    decimal.
+    Finally, Check if the result is correct.
+
+  5.0   68 - 19 = ?
+
+  5.1   120 - 63 = ?
+
+  5.2   45 - 29 = ?
+
+
+6.  Bonus: Consider the world of 8 bits (Byte) with the two's complement
+    interpretation. Every number has it's negative corresponding number. We have
+    seen that 0 is it's own complement, and also {10000000}_2 is it's own
+    complement.
+
+  6.0   Which decimal number is represented by {10000000}_2 ?
+
+  6.1   Are there any more numbers which are their own negation? Prove your
+        answer.
+
+
+7.  Bonus: The amount of binary numbers.
+  
+  7.0   How many binary numbers with 8 bits exist?
+
+  7.1   Considering the two's complement interpretation, how many binary numbers
+        with 8 digits are positive? Negative? 
+        Recall that we define the positive
+        numbers to be the numbers that has "0" as their 8th bit.
+
+  7.2   Which is more? Positive numbers or Negative numbers? Why?
+
+  7.2   Answer the same questions for the set of binary numbers with n bits.
+
+
+8.  Bonus: Division by 2: 
+
+  8.0   Assume the unsigned interpretation of binary numbers.
+    
+    8.0.0   How much is {10010}_2 divided by 2?
+
+    8.0.1   How much is {100}_2 divided by 2?
+
+    8.0.2   Could you find a general way of dividing by 2?
+
+  8.1   Assume the signed interpretation of binary numbers. (two's complement).
+        Fix the number of bits to be 8, for example.
+
+    8.1.0   How much is {00010010}_2 divided by 2? 
+
+    8.1.1   How much is {11001000}_2 divided by 2?
+
+    8.1.2   How much is {10110110}_2 divided by 2?
+
+    8.1.3   Find a general way of dividing by 2 in the two's complement
+            interpretation.
+
+9.  Relation to base 16:
+
+  We can recognize that a binary number in the two's complemenet
+  interpretation is negative by looking at the most siginificant bit (Bit
+  number 8 if we live in the world of 8 bits).
+
+  How could it be done for the equivalent number in base 16?
+  Find out whether the following numbers are positive or negative, in the two's
+  complement interpretation in the world of 8 bits:
+
+  9.0   0x3
+    Example for solution: 0x3 = {0000 0011}_2. This number is positive because
+    the most significant bit (Number 8) is 0.
+  
+  9.1   0x35
+
+  9.2   0xAB
+
+  9.3   0x77
+
+  9.4   0x7F
+
+  9.5   0x80
+
+
+Happy thinking :)

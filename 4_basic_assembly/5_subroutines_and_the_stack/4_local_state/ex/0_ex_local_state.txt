@@ -1,0 +1,14 @@
+Basic Assembly
+==============
+
+Subroutines and the stack
+-------------------------
+
+Local state exercises
+@@@@@@@@@@@@@@@@@@@@@
+
+Welcome to the Local state exercises section.
+The exercises contain two parts: Read code and Write code.
+Begin with Read code section, and more on to the Write code section.
+
+Have fun :)

@@ -1,0 +1,16 @@
+Basic fasm
+==========
+
+Hello and welcome to the basic fasm exercises section. We are finally going to
+write some real code and run it.
+
+You are going to encounter three parts for this exercise. The first one will be
+about reading code. The next one is about writing some code. The third part is
+about fixing assembly time problems of some already written programs.
+
+The exercises are very basic this time, as we still know pretty little about x86
+assembly at this point, however they should give you the feeling of writing very
+basic programs and assembling them. It will also give you the confidence to deal
+with some other assembly time problems that you might see in the future.
+
+Happy coding :)

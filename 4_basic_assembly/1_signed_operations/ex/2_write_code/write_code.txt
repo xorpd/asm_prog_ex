@@ -1,0 +1,55 @@
+Basic Assembly
+================
+
+Signed Operations
+-----------------
+
+Write code
+@@@@@@@@@@
+
+In the following exercises you will be asked to write actual programs that
+execute some work over given inputs and produce outputs.
+Use the first_program.asm template to be able to receive numeric input and
+produce numeric output. 
+
+You can just copy the first_program.asm file and use it as a starting point for
+any of your solutions to the following exercises.
+
+For every program that you write, make sure that it passes the assembly
+process successfuly, and then try to run it to make sure that it behaves as
+expected.
+
+
+0. 
+  0.0 Write a program that takes a double word (4 bytes) as an argument, and
+      then adds all the 4 bytes. It returns the sum as output. Note that all the
+      bytes are considered to be of unsigned value.
+
+      Example: For the number 03ff0103 the program will calculate 0x03 + 0xff +
+      0x01 + 0x3 = 0x106, and the output will be 0x106
+
+      HINT: Use division to get to the values of the highest two bytes.
+
+  0.1 Write a program that does the same, except that it multiplies the four
+      bytes. (All the bytes are considered to be unsigned).
+
+  0.2 Write a program that finds every double word (4 bytes) that satisfies the
+      following condition: When decomposed into 4 bytes, if we multiply those
+      four bytes, we get the original double word number.
+
+
+1. Finding the bit flip of a number.
+   Create a program that takes the number x as input, flips all its bits and
+   returns the result. Use the NEG instruction to do that, together with other
+   instructions that we have learned.
+
+   HINT: Remind yourself how the two's complement negation work, and try to use
+   it to your advantage.
+
+
+2. Find out a way to implement NEG using the SUB instruction (And some other
+   instructions that we have learned). Write a small piece of code which
+   demonstrates your conclusion.
+
+
+Happy coding :)

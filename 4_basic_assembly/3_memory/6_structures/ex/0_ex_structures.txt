@@ -1,0 +1,19 @@
+Basic Assembly
+================
+
+Memory
+------
+
+Structures exercises
+@@@@@@@@@@@@@@@@@@@@
+
+Welcome to the Structures exercises section.
+The exercises contain two parts: Code reading and Code writing.
+Begin with the Code reading, and later move on to the Code writing.
+
+Note that in the Read Code section a new subroutine was introduced:
+print_delimiter. This subroutine prints a delimiter "========" to the console.
+It helps to create a nicer looking output. (This subroutine is inside the
+training.inc file, if you were wondering.)
+
+Have fun :)

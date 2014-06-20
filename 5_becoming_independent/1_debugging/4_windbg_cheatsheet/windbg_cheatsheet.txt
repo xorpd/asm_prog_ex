@@ -1,0 +1,72 @@
+Becoming independent
+====================
+
+Windbg CheatSheet
+@@@@@@@@@@@@@@@@@
+
+Control Flow
+------------
+g   -   go (Resume execution)
+p   -   Step Over
+t   -   Step Into
+
+State
+-----
+r                   -   Show registers.
+d[d|w|b|a] address  -   Dump [dword|word|byte|ascii] at location address
+e[d,w,b] address    -   edit memory
+u address           -   Unassemble at location address, and print the code
+lm                  -   Show list of loaded modules
+k                   -   View stack
+? expression        -   Evaluate expression
+
+s begin end bytes   -   Search for bytes in range begin to end
+
+Breakpoints
+-----------
+bp address          -   Set software breakpoint at address
+bl                  -   Show list of breakpoints
+bc index            -   Clear breakpoint number index
+be index            -   Enable breakpoint number index
+bd index            -   Disable breakpoint number index
+
+ba [r|w|e][1|2|4] address 
+                    - Hardware breakpoint of type [r|w|e] of length [1|2|4] 
+                      bytes at address
+
+
+Examples
+@@@@@@@@
+
+r eax               - Show the value of the eax register.
+
+dd esp              - Show the contents of the memory at location esp. Actually
+                      shows the contents of the stack.
+
+u eip               - Disassemble the code at location eip, and print it.
+
+? 15 + 3*2          - Calculates the value of 15 + 3*2.
+
+? ecx + edx         - Calculates ecx + edx and prints back the result.
+
+? poi(ebp + 4)      - Shows the contents of the memory at location (ebp + 4).
+                      Inside a function this will show the return address of the
+                      function call.
+
+s   10000 10200 1 2 - Search for the sequence of bytes 1 2 inside the range of
+                      addresses 0x10000 to 0x10200.
+
+bp 10000            - Put a software breakpoint on address 0x10000.
+
+ba r4 10000         - Put a hardware breakpoint of length 4 bytes at address
+                      0x10000. Will trigger on read or write to that address.
+
+ba w2 10000         - Put a hardware breakpoint of length 2 bytes at address
+                      0x10000. Will trigger on write to that address.
+
+ba e1 10000         - Put a hardware breakpoint of length 1 byte at address
+                      0x10000. Will trigger on execution from that address.
+                      (Just like a software breakpoint). Note that hardware
+                      breakpoints of type e could only be of length 1 byte.
+
+bc 2                - Clear breakpoint number 2.

@@ -1,0 +1,57 @@
+Basic Assembly
+================
+
+Basic Conditional Branching
+---------------------------
+
+Write code
+@@@@@@@@@@
+
+In the following exercises you will be asked to write actual programs that
+execute some work over given inputs and produce outputs.
+Use the first_program.asm template to be able to receive numeric input and
+produce numeric output. 
+
+You can just copy the first_program.asm file and use it as a starting point for
+any of your solutions to the following exercises.
+
+For every program that you write, make sure that it passes the assembly
+process successfuly, and then try to run it to make sure that it behaves as
+expected.
+
+
+0.  
+  0.0 Write a program that takes the value n as input, and finds the sum of
+      all the odd numbers between 1 and 2n+1, inclusive.
+
+  0.1 Write a program that takes the value m as input. It then receives m
+      consecutive numbers from the user, sums all those numbers and prints back
+      the total sum to the console.
+
+
+1.  Write a program that takes three numbers as input: x,y,z. Then it prints 1
+    to the console if x < y < z. It prints 0 otherwise.
+
+    NOTE: The comparison should be in the unsigned sense. That means for
+    example: 0x00000003 < 0x7f123456 < 0xffffffff
+
+
+2.  The Fibonacci series is the series of numbers where every number is the sum
+    of the two previous numbers. It begins with the numbers: 1,1,2,3,5,8,...
+    Write a program that takes as input the number n, and prints back the n-th
+    element of the fibonacci series.
+
+    Bonus question: What is the largest n that can be given to your program such
+    that it still returns a correct answer? What happens when it is given larger
+    inputs?
+
+
+3.  A prime number is an integer that is divisible only by 1 and by itself.
+
+  3.0   Write a program that takes a number m as input, and prints back 1 to the
+        console if m is a prime number. Otherwise, it prints 0.
+
+  3.1   Write a program that takes a number n as input, and prints back to the
+        console all the primes that are larger than 1 but not larger than n.
+
+Happy coding :)

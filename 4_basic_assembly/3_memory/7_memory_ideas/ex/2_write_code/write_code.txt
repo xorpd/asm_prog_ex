@@ -1,0 +1,201 @@
+Basic Assembly
+================
+
+Memory - Memory ideas
+---------------------
+
+Write Code
+@@@@@@@@@@
+
+In the following exercises you will be asked to write some programs.
+
+For every program that you write, make sure that it passes the assembly
+process successfuly, and then try to run it to make sure that it behaves as
+expected.
+
+
+0.  Max in table.
+
+    0.0   Create a new program, and add this table into your program (In the
+          data section).
+
+      my_tbl db     0x8f, 0x09, 0x2c, 0xca, 0x00, 0x35, 0xd3, 0xde, 0x6d, 0xed
+             db     0xd8, 0xf5, 0x7b, 0x4b, 0xb1, 0x7d, 0x0c, 0x8a, 0x25, 0x8b
+             db     0x32, 0x0b, 0x2f, 0x09, 0xf0, 0x37, 0x86, 0x06, 0xda, 0x9d
+             db     0xb8, 0x25, 0x17, 0x8c, 0xff, 0x36, 0x56, 0x6e, 0xe3, 0xd2
+             db     0x11, 0xa6, 0x8f, 0x8b, 0xb5, 0xc2, 0x8f, 0xcd, 0x05, 0x2b
+             db     0x58, 0x0a, 0x56, 0x05, 0x33, 0xe3, 0xa5, 0x07, 0x30, 0x4e
+             db     0x63, 0xd2, 0x18, 0x00, 0xb0, 0x6c, 0xc0, 0xdc, 0xd7, 0xcf
+             db     0x0d, 0xef, 0x00, 0x71, 0x12, 0x75, 0xb2, 0x2c, 0x52, 0x20
+             db     0xda, 0xbe, 0x9f, 0x7d, 0xfe, 0xc0, 0x47, 0x88, 0x03, 0x83
+             db     0x29, 0x7f, 0xea, 0x15, 0x86, 0x13, 0x41, 0xa6, 0x1b, 0x7a
+             db     0x67, 0xe4, 0x51, 0x97, 0x37, 0x50, 0x67, 0x42, 0xbf, 0x32
+             db     0xac, 0xea, 0x88, 0xc1, 0x93, 0x37, 0x33, 0xa7, 0x02, 0x21
+             db     0x47, 0x74, 0x8c, 0x9f, 0xc8, 0x59, 0xe1, 0xfe, 0xd9, 0xe1
+             db     0x0e, 0xac, 0x38, 0x98, 0x15, 0xe0, 0xf3, 0xd0, 0x1b, 0x4c
+             db     0x02, 0x5a, 0xf2, 0x13, 0x19, 0x51, 0xca, 0xd3, 0x33, 0xd4
+             db     0x77, 0x1b, 0x28, 0x56, 0x57, 0x99, 0x46, 0x7a, 0xb5, 0xce
+             db     0x6d, 0xee, 0x30, 0xd9, 0xcf, 0x13, 0x4a, 0xeb, 0xac, 0x17
+             db     0x08, 0x41, 0x32, 0x0a, 0x6e, 0xd4, 0xf7, 0x00, 0x82, 0x12
+             db     0xcc, 0xf8, 0xea, 0x17, 0xdd, 0xcb, 0xeb, 0x72, 0x26, 0x04
+             db     0x89, 0x4d, 0xfb, 0xae, 0xd6, 0x8b, 0x4a, 0x14, 0xd4, 0xea
+             db     0x32, 0x58, 0x91, 0xf7, 0x25, 0xee, 0x51, 0xb7, 0x28, 0x1e
+             db     0x98, 0x75, 0xd1, 0xef, 0x99, 0x83, 0x3b, 0x33, 0xa8, 0xa3
+             db     0xd2, 0x17, 0x94, 0x6d, 0xad, 0x82, 0x30, 0xdd, 0x93, 0xd6
+             db     0x8e, 0x9a, 0x49, 0x77, 0x9d, 0x9d, 0xce, 0x61, 0x71, 0xe4
+             db     0xea, 0xa4, 0x8d, 0xfc, 0xf2, 0x62, 0xe4, 0x22, 0xe9, 0x91
+             db     0x14, 0x71, 0x83, 0x21, 0x95, 0xc5
+
+    0.1   Write a piece of code that finds the maximum number inside this table,
+          and prints it as output. (I know you can just find it with your eyes,
+          but this is a good warmup exercise :) ).
+          
+          NOTES: 
+            - Find the maximum in the unsigned sense. Note that all the numbers
+              in the table are bytes.
+
+            - Use the $ syntax to find out the size of this table, without
+              having to count its size yourself.
+
+
+1.  Transpose.
+    
+    1.0   Create a new program. Add a two dimensional table A (of dwords) in the
+          bss section of your program, of sizes: HEIGHT X WIDTH. Initialize cell
+          number A(i,j) (Row number i, column number j) with the number i+j.
+
+          Print some cells of the table A to make sure that your code works
+          correctly.
+
+    1.1   Add another table B to your bss section, with dimensions WIDTH X
+          HEIGHT. (Note that this table has different dimensions!)
+
+          Then add a piece of code that for every pair i,j: Stores A(i,j) into
+          B(j,i). 
+
+          In another formulation:
+          B(j,i) <-- A(i,j) for every i,j.
+
+          Example:
+
+            Original A table:
+            
+              0 1 2 3
+              1 2 3 4
+
+            Resulting B table:
+
+              0 1
+              1 2
+              2 3
+              3 4
+
+    1.2   Print some cells of table A and table B to make sure that your code
+          works correctly.
+
+
+2.  Count paths.
+    
+    We consider a two dimensional table of size N X N:
+
+      +---+---+---+---+
+      |   |   |   |   |
+      | S |   |   |   |
+      |   |   |   |   |
+      +---+---+---+---+
+      |   |   |   |   |
+      |   |   |   |   |
+      |   |   |   |   |
+      +---+---+---+---+
+      |   |   |   |   |
+      |   |   |   |   |
+      |   |   |   |   |
+      +---+---+---+---+
+      |   |   |   |   |
+      |   |   |   | E |
+      |   |   |   |   |
+      +---+---+---+---+
+
+    With two special cells: Start (S) and End (E). Start is the top left cell,
+    and End is the bottom right cell. 
+    
+    A valid path from S to E is a path that begins with S, ends with E, and
+    every step in the path could either be in the down direction, or in the
+    right direction. (Up or left are not allowed).
+
+      Example for a valid path: right, right, down, down, right, down:
+
+      +---+---+---+---+
+      |   |   |   |   |
+      | S-|---|-+ |   |
+      |   |   | | |   |
+      +---+---+---+---+
+      |   |   | | |   |
+      |   |   | | |   |
+      |   |   | | |   |
+      +---+---+---+---+
+      |   |   | | |   |
+      |   |   | +-|-+ |
+      |   |   |   | | |
+      +---+---+---+---+
+      |   |   |   | | |
+      |   |   |   | E |
+      |   |   |   |   |
+      +---+---+---+---+
+
+    We would like to count the amount of possible valid paths from S
+    to E.
+
+
+    2.0   Let T be some cell in the table:
+
+             |   |   |
+             |   |   |
+           --+---+---+--
+             |   |   |
+             |   | R |
+             |   |   |
+           --+---+---+--
+             |   |   |
+             | Q | T |
+             |   |   |
+           --+---+---+--
+             |   |   |
+             |   |   |
+
+          Prove that the amount of valid paths from S to T equals to the amount
+          of paths from S to Q plus the amount of paths from S to R.
+
+    2.1   Define a constant N in your program, and create a two dimensional
+          table of size N X N (of dwords). Call it num_paths. We will use this
+          table to keep the amount of possible valid paths from S to any cell in
+          the table.
+
+    2.2   The amount of paths from S to each of the cells in the top row, or the
+          leftmost column, is 1. 
+          
+          Write a piece of code that initializes all the top row and the
+          leftmost column to be 1.
+
+    2.3   Write a piece of code that iterates over the table num_paths. For
+          every cell num_paths(i,j) it will assign:
+
+          num_paths(i,j) <-- num_paths(i-1,j) + num_paths(i,j-1)
+
+          Note that you should not iterate over the top row and the leftmost
+          column, because you have already assigned them to be 1.
+
+    2.4   The last cell in num_paths, num_paths(N-1,N-1) contains the amount of
+          valid paths possible from S to E. 
+
+          Add a piece of code to print this number.
+
+    2.5   Bonus: Could you find out num_paths(N-1,N-1) with less memory?
+          Currently we use about O(N^2) dwords of memory. Could you do it with
+          about O(N) dwords of memory?
+
+    2.6*  Bonus: Could you calculate the number num_paths(N-1,N-1) without using
+          the computer at all?
+
+
+Happy coding :)

@@ -1,0 +1,140 @@
+Basic Assembly
+================
+
+Strings
+-------
+
+Write Code
+@@@@@@@@@@
+
+In the following exercises you will be asked to write some programs.
+
+For every program that you write, make sure that it passes the assembly
+process successfully, and then try to run it to make sure that it behaves as
+expected.
+
+As at this point we already know how to use strings, make sure that whenever you
+ask for input from the user, ask it nicely, by printing a polite message to the
+screen.
+
+
+0.  Diamond
+
+    Write a program that asks the user for a number n, and then prints a
+    "diamond" of size n, made of ASCII stars.
+
+    Example:
+      For n = 1 the expected result is:
+
+       *
+      ***
+       *
+
+      For n = 2 the expected result is:
+
+        *
+       ***
+      *****
+       ***
+        *
+
+    HINT: You could use tri.asm exercise from the code reading section as a
+    basis for your program.
+
+
+1.  Palindrome
+
+    A palindrome is a sequence of symbols which is interpreted the same if read in
+    the usual order, or in reverse order.
+    
+    Examples:
+
+      1234k4321   is a palindrome.
+      5665        is a palindrome.
+
+      za1221at    is not a palindrome.
+
+
+    Write a program that takes a string as input, and decides whether it is a
+    palindrome or not. It then prints an appropriate message to the user.
+
+
+2.  CaSe
+    
+    Write a program that asks the user for a string. It then flips every letter
+    from lower case to UPPER case and vice versa, and prints back the result to the
+    user.
+
+    Example:
+      Input:  Hello
+      Output: hELLO
+
+    You may assume that the input is only made of letters. (No spaces or
+    other punctuation marks).
+
+
+3.  Common sense
+
+    Write a program that reads a string from the user, and then finds out the
+    most common character in the string. (Don't count spaces).
+    
+    Finally the program prints that character back to the user, together with
+    its number of occurrences in the string.
+    
+    Example:
+
+      Input:  The summer is the place where all things find their winter
+
+      Output: The character e is the most common character on the string.
+              Amount of occurrences: 8
+
+
+4.  Substring
+
+    Write a program that asks the user for two strings: s1,s2. 
+    
+    The program then searches for all the occurrences of s2 inside s1, and prints
+    back to the user the locations of all the found occurrences.
+
+    Example:
+      
+      Input:  s1 = 'the colors of my seas are always with me.'
+              s2 = 'th'
+
+      Search: s1 = 'the colors of my seas are always with me.'
+                    th                                 th
+                    00000000000000001111111111111111222222222
+                    0123456789abcdef0123456789abcdef012345678
+
+      Output: Substring was found at locations:
+              0
+              23
+
+
+5.  Number to String
+
+    We are going to write a program that converts a number into its base 10
+    representation, as a string.
+
+    The program will read a number as input (Using the read_hex helper
+    subroutine). It will then print back the number, in base 10.
+
+    Example:
+      
+      Input:  1f23
+      output: 7971 (Decimal representation).
+
+    HINTS:
+      - Recall that the input number could be imagined to be in the form:
+        input = (10^0)*a_0 + (10^1)*a_1 + ... + (10^t)*a_t
+
+      - Use repeated division method to calculate the decimal digits
+        a_0,a_1,...,a_t.
+
+      - Find out how to translate each decimal digit into the corresponding
+        ASCII symbol. (Recall the codes for the digits '0'-'9').
+
+      - Build a string and print it. Remember the null terminator!
+
+
+Happy coding :)

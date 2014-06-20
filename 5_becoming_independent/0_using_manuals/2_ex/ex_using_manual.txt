@@ -1,0 +1,45 @@
+Becoming independent
+====================
+
+Using the manual
+----------------
+
+0.  Known instructions:
+
+    - Search for the following instructions and read their descriptions. 
+    - Try to understand as much as you can from the manuals.
+
+    0.  AND
+    1.  LEAVE
+    2.  The conditional jumps (Search for JCC)
+    3.  BSWAP
+
+
+1.  Find an instruction in AMD's general purpose instruction reference, which
+    can not be found inside Intel's manual instruction set.
+
+
+2.  New instructions
+
+      - Search for the following instructions and read their descriptions. 
+      - Try to understand as much as you can from the manuals. 
+      - For every instruction write a simple example program that uses it.
+
+    0.  RCR
+    1.  ANDN
+    2.  CMC
+    3.  NOP
+
+
+3.  Bonus: More instructions
+
+      - Search for the following instructions and read their descriptions. 
+      - Try to understand as much as you can from the manuals. 
+      - For every instruction write a simple example program that uses it.
+
+    0.  CMOVcc
+    1.  POPCNT
+    2.  ENTER - What does the second argument do?
+
+
+Happy instructions hunting :)

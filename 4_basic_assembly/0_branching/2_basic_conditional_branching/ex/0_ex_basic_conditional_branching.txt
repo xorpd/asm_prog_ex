@@ -1,0 +1,22 @@
+Basic Assembly
+================
+
+Basic Conditional Branching
+---------------------------
+
+Welcome to the Basic Conditional Branching exercises section.
+This exercise has two parts: Code reading and Code writing.
+
+Do the Code reading first. It will show you how code that branches looks like.
+Then move on to the Code Writing section, where you are going to write some code
+yourself.
+
+Pay attention to the flags register and the way it is effected by different
+instructions. I remind you that data transfer instructions, like MOV, do not
+change the flags register.
+
+As a hint, In this exercises section sometimes you might want to use a dummy
+instruction like ADD eax,0 or SUB eax,0 for example, in order to intentionally
+change the contents of the flags register.
+
+Have fun :)

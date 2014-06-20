@@ -1,0 +1,86 @@
+4.4.2014
+
+Ideas for Local State exercises:
+
+Important points:
+* Should demonstrate:
+  * Local variables.
+  * ENTER and LEAVE
+  * Examples without ENTER and LEAVE.
+  * Using constant labels to access variables and arguments?
+
+Read Code
+---------
+
+-   (Islands) DFS algorithm for graphs. Find the connected components. (Bonus?)
+-   Calculating Catalan's numbers. (Have to keep all previous numbers?)
+
+?   Work on strings inside local memory?
+
+-   Calculating determinant? (Recursive?)
+
+-   Matrix multiplication ?
+
+-   Complex numbers multiplication
+
+-   Levenshtein distance.
+
+-   gcd.
+    - Adding fractions? Fractions library?
+
+-   Binary GCD algorithm.
+    -- done (Stein)
+
+-   Reverse polish notation calculation?
+
+-   Print stack trace? (Follow EBP?)
+    -- done (Way home)
+
+-   push by call trick:
+
+  call loc
+    db  'asdfjlkjfsdfsdf'
+  loc:
+    call func
+
+    -- done (String in the sleeve)
+
+-   Array bubble sort.
+    -- done (Bubbles)
+
+
+http://www.keithschwarz.com/interesting/
+
+
+?   Concepts to cover:
+    - Jump table (Case)
+      -- done something similar. (Call table)
+    - Functional programming?
+    - Stack trace by ebp?
+      -- done (way home).
+
+
+
+Write Code
+----------
+
+-   Matrix multiplication.
+    Calculating fibonacci numbers using 2X2 matrices.
+    1 1
+    1 0
+    To the power of n gives fibonacci numbers.
+    -- done (Matrix fibonacci).
+
+-   Complex numbers.
+
+-   Fractions:
+    -- done (Basel)
+    - Addition of fractions.
+
+    - Approximating pi^2
+    
+- Caesar cipher
+
+    
+
+
