@@ -42,7 +42,7 @@ The ten's complement
 
   1.2   425 - 296 = ?
 
-  1.4   6312 - 4129 = ?
+  1.3   6312 - 4129 = ?
 
 
 The two's complement
@@ -118,7 +118,7 @@ The two's complement
 
   7.2   Which is more? Positive numbers or Negative numbers? Why?
 
-  7.2   Answer the same questions for the set of binary numbers with n bits.
+  7.3   Answer the same questions for the set of binary numbers with n bits.
 
 
 8.  Bonus: Division by 2: 
