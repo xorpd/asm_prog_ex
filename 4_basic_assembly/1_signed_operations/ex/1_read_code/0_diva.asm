@@ -24,7 +24,7 @@
 ;       Is the result correct? What happens if both of the of the arguments are
 ;       negative?
 ;
-; 6.    Try to change the "cdq" instruction to "mov edx,1", and check what
+; 6.    Try to change the "cdq" instruction to "mov edx,0", and check what
 ;       results do you get now. Do you still get correct results for negative
 ;       numbers?
 ;       
