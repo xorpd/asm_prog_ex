@@ -18,7 +18,7 @@
 ;       the hex data.
 ;
 ; 4.    How can you change the program so that it will also apply to the code
-;       inside io_footer.inc ?
+;       inside training.inc ?
 ;
 
 format PE console
