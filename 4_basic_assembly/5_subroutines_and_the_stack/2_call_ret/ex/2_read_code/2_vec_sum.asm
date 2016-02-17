@@ -93,7 +93,7 @@ start:
 
 .next_vec:
     call    add_vecs
-    add     esi,4
+    add     esi,sizeof.VEC
     inc     ecx
     cmp     ecx,LIST_LEN
     jnz     .next_vec
