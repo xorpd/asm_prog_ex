@@ -1,0 +1,172 @@
+Base 2 Answers
+==============
+
+Base 16 exercises
+------------------
+
+0.  Convert the following numbers to binary:
+
+  0.0   0xD = {?}_2
+
+    ANSWER:
+
+    Hex to binary table:
+
+    0x0 = 0000
+    0x1 = 0001
+    0x2 = 0010
+    0x3 = 0011
+    0x4 = 0100
+    0x5 = 0101
+    0x6 = 0110
+    0x7 = 0111
+    0x8 = 1000
+    0x9 = 1001
+    0xA = 1010
+    0xB = 1011
+    0xC = 1100
+    0xD = 1101
+    0xE = 1110
+    0xF = 1111
+
+    1101
+  
+  0.1   0xF = {?}_2
+
+    ANSWER:
+
+    1111
+
+  0.2   0x3A = {?}_2
+
+    ANSWER:
+
+    0011 1010
+
+  0.3   0x4532 = {?}_2
+
+    ANSWER:
+
+    0100 0101 0011 0010
+
+  0.4   0x9A9B = {?}_?
+
+    ANSWER:
+
+    1001 1010 1001 1011
+
+1. Convert the following binary numbers to base 16:
+  
+  1.0   {10}_2 = {?}_16
+
+    ANSWER:
+
+    0x2
+
+  1.1   {110}_2 = {?}_16
+
+    ANSWER:
+
+    0x6
+
+  1.2   {1011}_2 = {?}_16
+
+    ANSWER:
+
+    0xB
+
+  1.3   {11110101}_2 = {?}_16
+
+    ANSWER:
+
+    0xF5
+
+  1.4   {1111100}_2 = {?}_16
+
+    ANSWER:
+
+    0x7C
+
+  1.5   {1010101111001101}_2 = {?}_16
+
+    ANSWER:
+
+    0xABCD
+
+2. Convert the following numbers (Pay attention to the wanted result base):
+
+  2.0   {10110}_2 = {?}_8
+
+    ANSWER:
+
+    Octal to binary table:
+
+    0 = 000
+    1 = 001
+    2 = 010
+    3 = 011
+    4 = 100
+    5 = 101
+    6 = 110
+    7 = 111
+
+    26
+
+  2.1   {1100111}_2 = {?}_8
+
+    ANSWER:
+
+    147
+
+  2.2   {101001}_2 = {?}_4
+
+    Base 4 to binary table
+
+    0 = 00
+    1 = 01
+    2 = 10
+    3 = 11
+
+    ANSWER:
+
+    221
+
+  2.3   {3725}_8 = {?}_2
+
+    ANSWER:
+
+    011 111 010 101
+
+  2.4   {57137}_8 = {?}_4   (Hint: Try to use base 2 as a mediator.)
+
+    ANSWER:
+
+    101 111 001 011 111
+
+    11321133
+
+3.  Think of an easy way to convert numbers from base 16 to base 4, and vice
+    versa.
+
+      ANSWER:
+
+      Create a Hex to binary table. The binary numbers consist of 2 base 4 numbers.
+
+4.  Basic divisibility rules:
+
+  4.0   How could you check if a number represented in base 16 is divisible by
+        2?
+
+    ANSWER:
+
+    Check if the least significant number is even or odd. When it is even it is 
+    divisible by 2.
+
+  4.1   Bonus: How could you check if a number represented in base 16 is
+        divisible by 4? By 8?
+
+    ANSWER:
+
+    If the least significant number is a multiple of 4 (0, 4, 8, C).
+    If the least significant number is a multiple of 8 (0, 8).
+
