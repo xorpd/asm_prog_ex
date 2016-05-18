@@ -1,0 +1,712 @@
+Base 2 Answers
+==============
+
+Notes: We use a -> to indicate we calculate a x-complement
+
+Signed Numbers
+--------------
+
+The ten's complement
+@@@@@@@@@@@@@@@@@@@@
+
+0.  Find the ten's complement of the following numbers:
+    (Note: All numbers here are in base 10)
+
+  0.0   18  (When living in the world of 2 decimal digits).
+
+    ANSWER:
+
+    Ten's complement rule:
+
+    (9 - d) + 1 
+
+    81 + 1 = -82
+
+  0.1   25  (When living in the world of 3 decimal digits).
+
+    ANSWER:
+
+    025
+
+    974 + 1 = -975
+
+  0.2   131 (When living in the world of 3 decimal digits).
+
+    ANSWER:
+
+    868 + 1 = -867
+
+1.  Solve the following using the ten's complement method:
+    (Note: We are working in base 10 here.)
+    Hint: Change the subtrahend to its ten's complement form.
+          Make sure to fix the amount of decimal digits being used.
+
+  1.0   35 - 6 = ?
+
+    ANSWER:
+
+    (2 decimal digits)
+
+    -6 -> 93 + 1 = 94
+
+    35 + 94 = 129
+
+    (use only 2 decimal digits)
+
+    35 - 6 = 29
+
+  1.1   111 - 17 = ?
+
+    ANSWER:
+
+    (2 decimal digits)
+
+    -17 -> 82 + 1 = 83
+
+    111 + 83 = 194
+
+    (use only 2 decimal digits)
+
+    111 - 17 = 94
+
+  1.2   425 - 296 = ?
+
+    ANSWER:
+
+    (3 decimal digits)
+
+    -296 -> 703 + 1 = 704
+
+    425 + 704 = 1129
+
+    (use only 3 decimal digits)
+
+    425 - 296 = 129
+
+  1.3   6312 - 4129 = ?
+
+    ANSWER:
+
+    (4 decimal digits)
+
+    -4129 -> 5870 + 1 = 5871
+
+    6312 + 5871 = 12183
+
+    (use only 4 decimal digits)
+
+    6312 - 4129 = 2183 
+
+
+The two's complement
+@@@@@@@@@@@@@@@@@@@@
+
+2.  Find the two's complement of the following binary numbers:
+    (Note: All numbers here are in base 2):
+
+  2.0   {1001}_2  (In the world of 4 bits).
+
+    ANSWER:
+
+    1001 -> 0110 + 1 = 0111
+
+  2.1   {1110}_2  (In the world of 5 bits).
+
+    ANSWER:
+
+    01110 -> 10001 + 1 = 10010
+
+  2.2   {1}_2     (In the world of 8 bits).
+
+    ANSWER:
+
+    00000001 -> 11111110 + 1 = 11111111
+
+  2.3   {11001100}_2  (In the world of 8 bits).
+
+    ANSWER:
+
+    11001100 -> 00110011 + 1 = 00110100
+
+3.  Solve the following using the two's complement method:
+    Hint: Change the subtrahend to its two's complement form.
+          Make sure to fix the amount of bits used.
+  
+  3.0   {1101}_2 - {1001}_2 = ?
+
+    ANSWER:
+
+    -1001 -> 0110 + 1 = 0111
+
+    1101  
+    0111 + 
+    ======
+   10100
+
+    (use only 4 bits)
+
+    1101 - 1001 = 0100
+
+  3.1   {1010111}_2 - {100110}_2 = ?
+
+    ANSWER:
+
+    -100110 -> 011001 + 1 = 011010
+
+    1010111 
+     011010 +
+    =========
+    1110001
+
+    (use only 6 bits)
+
+    1010111 - 100110 = 110001
+
+  3.2   {10111}_2 - {1100}_2 = ?
+
+    ANSWER:
+
+    -1100 -> 0011 + 1 = 0100
+
+    10111  
+     0100 +
+    =======
+    11011
+
+    (use only 4 bits)
+
+    10111 - 1100 = 1011
+
+4.  Find the signed form (two's complement) of the following decimal numbers:
+    Fix the number of bits to be 8.
+
+  4.0   125
+
+    ANSWER:
+
+    First go from base 10 to base 2
+
+    125 | 1
+     62 | 0
+     31 | 1
+     15 | 1
+      7 | 1
+      3 | 1
+      1 | 1
+
+    (use 8 bits)
+
+    {125}_10 = {01111101}_2
+
+  4.1   -15
+
+    ANSWER:
+
+    First calculate what the positive number in base 2 is.
+
+    15 | 1
+     7 | 1
+     3 | 1
+     1 | 1
+
+    (use 8 bits)
+
+    00001111 -> 11110000 + 1 = 11110001
+
+    {-15}_10 = {11110001}_2
+    
+
+  4.2   5
+
+    ANSWER:
+
+    5 | 1
+    2 | 0
+    1 | 1
+
+    (use 8 bits)
+
+    {5}_10 = {00000101}_2
+
+  4.3   127
+
+    ANSWER:
+
+    127 | 1
+     63 | 1
+     31 | 1
+     15 | 1
+      7 | 1
+      3 | 1
+      1 | 1
+
+    {127}_10 = {01111111}_2
+
+  4.4   -65
+
+    ANSWER:
+    
+    65 | 1
+    32 | 0
+    16 | 0
+     8 | 0
+     4 | 0
+     2 | 0 
+     1 | 1
+
+    01000001 -> 10111110 + 1 = 10111111
+
+    {-65}_10 = {10111111}_2
+
+5.  Transform the following decimal exercises into the binary two's complement
+    form, solve it using the binary form, and convert it back to
+    decimal.
+    Finally, Check if the result is correct.
+
+  5.0   68 - 19 = ?
+
+    ANSWER:
+
+    68 | 0
+    34 | 0
+    17 | 1
+     8 | 0
+     4 | 0
+     2 | 0
+     1 | 1
+
+    01000100 
+
+    19 | 1
+     9 | 1
+     4 | 0
+     2 | 0
+     1 | 1
+
+    00010011
+
+    01000100 - 00010011 = ?
+
+    00010011 -> 11101100 + 1 = 11101101
+
+    01000100
+    11101101 +
+    ==========
+   100110001
+
+    (use 8 bits)
+
+    01000100 - 00010011 = 00110001
+
+    Back to decimal:
+
+    00110001 = 1 * 2^0 + 1 * 2^4 + 1 * 2^5 
+             = 1 + 16 + 32
+             = 49
+
+  5.1   120 - 63 = ?
+
+    ANSWER:
+
+    120 | 0
+     60 | 0
+     30 | 0
+     15 | 1
+      7 | 1
+      3 | 1
+      1 | 1
+
+    01111000
+
+    63 | 1
+    31 | 1
+    15 | 1
+     7 | 1
+     3 | 1
+     1 | 1
+
+    00111111
+
+    01111000 - 00111111 = ?
+
+    00111111 -> 11000000 + 1 = 11000001
+
+    01111000
+    11000001 +
+    ==========
+   100111001
+
+    (use 8 bits)
+
+    01111000 - 00111111 = 00111001
+
+    00111001 = 1 * 2^0 + 1 * 2^3 + 1 * 2^4 + 1 * 2^5
+             = 1 + 8 + 16 + 32
+             = 57
+
+  5.2   45 - 29 = ?
+
+    ANSWER:
+
+    45 | 1
+    22 | 0
+    11 | 1
+     5 | 1
+     2 | 0
+     1 | 1
+
+    00101101
+
+    29 | 1
+    14 | 0
+     7 | 1
+     3 | 1
+     1 | 1
+
+    00011101
+
+    00101101 - 00011101 = ?
+
+    00011101 -> 11100010 + 1 = 11100011
+
+    00101101 
+    11100011 +
+    ==========
+   100010000
+
+    (use 8 bits)
+
+    00101101 - 00011101 = 00010000
+
+    00010000 = 1 * 2^4 
+             = 16
+
+6.  Bonus: Consider the world of 8 bits (Byte) with the two's complement
+    interpretation. Every number has it's negative corresponding number. We have
+    seen that 0 is it's own complement, and also {10000000}_2 is it's own
+    complement.
+
+  6.0   Which decimal number is represented by {10000000}_2 ?
+
+    ANSWER:
+
+    The lowest number, negative: -128
+
+  6.1   Are there any more numbers which are their own negation? Prove your
+        answer.
+
+    ANSWER:
+
+    Every number that has as most significat bit a 1, followed by only 0's.
+
+    1000 0000 0000 -> 0111 1111 1111 + 1 = 1000 0000 0000
+
+    100 -> 011 + 1 = 100
+
+7.  Bonus: The amount of binary numbers.
+  
+  7.0   How many binary numbers with 8 bits exist?
+
+    ANSWER:
+
+    2^8 = 256
+
+  7.1   Considering the two's complement interpretation, how many binary numbers
+        with 8 digits are positive? Negative? 
+        Recall that we define the positive
+        numbers to be the numbers that has "0" as their 8th bit.
+
+    ANSWER:
+
+    The range of 8 bits signed numbers is from -128 to 127. Since 0 is considered positive,
+    We have a total of 127 + 1 = 128 positive numbers.
+    We have a total of 128 negative numbers.
+
+    Another aproach:
+
+    The range from 0000 0000 to 0111 1111 is positive and the range from 1000 0000 to 
+    1111 1111 is negative. 
+    
+    Positive = 1 * 2^0 + 1 * 2^1 + 1 * 2^2 + 1 * 2^3 + 1 * 2^4 + 1 * 2^5 + 1 * 2^6 + 1 * 2^7
+             = 1 + 2 + 4 + 8 + 16 + 32 + 64
+             = 127
+
+    Also 0000 0000 is positive so 127 + 1 = 128.
+
+    For negative numbers you have the same calculation, instead of 0000 0000, we add 1000 0000 
+    as a posibility, so also 127 + 1 = 128.
+
+  7.2   Which is more? Positive numbers or Negative numbers? Why?
+
+    ANSWER:
+
+    Equal, because the lower boundaries of negative and positive numbers (given that 0 is formally 
+    positive), both complement themself. 
+
+  7.3   Answer the same questions for the set of binary numbers with n bits.
+
+    ANSWER:
+
+    The equation for the number of possibilities, positive and negative is:
+
+    2^n / 2
+
+    Example: for 2 bits that is:
+
+    2^2 / 2 = 2
+
+    00 = 0
+    01 = 1
+    10 = -1
+    11 = -2
+
+    Example: for 8 bits that is:
+
+    2^8 / 2 = 128
+
+8.  Bonus: Division by 2: 
+
+  8.0   Assume the unsigned interpretation of binary numbers.
+    
+    8.0.0   How much is {10010}_2 divided by 2?
+
+      ANSWER:
+
+      {10010}_2 = 1 * 2^1 + 1 * 2^4
+                = 2 + 16
+                = 18
+
+      18 / 2 = 9
+
+      9 | 1
+      4 | 0
+      2 | 0
+      1 | 1
+
+      1001
+
+      Or simply a bit shift to the right:
+
+      1001
+
+    8.0.1   How much is {100}_2 divided by 2?
+
+      ANSWER:
+
+      Bit shift to the right:
+
+      10
+
+    8.0.2   Could you find a general way of dividing by 2?
+
+      ANSWER:
+
+      Bit shift to the right:
+
+  8.1   Assume the signed interpretation of binary numbers. (two's complement).
+        Fix the number of bits to be 8, for example.
+
+    8.1.0   How much is {00010010}_2 divided by 2? 
+
+      ANSWER:
+
+      Rewrite equation in base 2.
+
+      {00010010}_2 / {2}_10
+
+      {2}_10 = {10}_2
+
+      {00010010}_2 / {00000010}_2
+
+      Let's use the old skool method to divide (because this is the same as answer
+      8.0.0).
+
+      The division is the two's complement of the divisor, added to the dividend. 
+      After that the quotient replaces the dividend and another addition is done,
+      as long as we have nothing left or a remainder that is not divisible by the
+      divisor.
+
+      00000010 -> 11111101 + 1 = 11111110
+
+      00010010
+      11111110 +
+      ==========
+     100010000
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00010000
+      11111110 +
+      ==========
+     100001110
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00001110
+      11111110 +
+      ==========
+     100001100
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00001100
+      11111110 + 
+      ===========
+     1000001010
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00001010
+      11111110 + 
+      ==========
+     100001000
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00001000
+      11111110 +
+      ==========
+     100000110
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00000110
+      11111110 +
+      ==========
+     100000100
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00000100
+      11111110 +
+      ==========
+     100000010
+
+      (use 8 bits)
+      (use the quotient, replace with dividend)
+
+      00000010
+      11111110 +
+      ==========
+     100000000
+
+      (use 8 bits)
+
+      No remainder. We needed 9 steps so the answer is 9. And {9}_10 = {1001}_2.
+
+    8.1.1   How much is {11001000}_2 divided by 2?
+
+      ANSWER:
+
+      11001000 -> 00110111 + 1 = 00111000
+
+      {00111000}_2 = 1 * 2^3 + 1 * 2^4 + 1 * 2^5
+                   = 8 + 16 + 32
+                   = 56
+
+      {11001000}_2 = -56
+
+      -56 / 2 = -28
+
+      28 | 0
+      14 | 0
+       7 | 1
+       3 | 1
+       1 | 1
+
+      {00011100}_2 = {28}_10
+
+      00011100 -> 11100011 + 1 = 11100100
+
+    8.1.2   How much is {10110110}_2 divided by 2?
+
+      ANSWER:
+
+      10110110 -> 01001001 + 1 = 01001010
+
+      {01001010}_2 = 1 * 2^1 + 1 * 2^3 + 1 * 2^6
+                   = 2 + 8 + 64
+                   = 74
+
+      -74 / 2 = -37
+
+      37 | 1
+      18 | 0
+       9 | 1
+       4 | 0
+       2 | 0
+       1 | 1
+
+      {00100101}_2 = {37}_10
+
+      00100101 -> 11011010 + 1 = 11011011
+
+    8.1.3   Find a general way of dividing by 2 in the two's complement
+            interpretation.
+
+      ANSWER: 
+
+      We see that there is still a bit shift to the right, but the most 
+      significant bit (8th position) get the binary 1 instead of 0.
+
+      Conclusion: When dividing a unsigned number, you can perform a bit
+                  shift to the right and set a 0 on the most significant
+                  bit.
+
+                  When dividing a signed number, and the sign bit is 1,
+                  you can perform a bit shift to the right and set a 1
+                  on the new sign bit.
+
+9.  Relation to base 16:
+
+  We can recognize that a binary number in the two's complemenet
+  interpretation is negative by looking at the most siginificant bit (Bit
+  number 8 if we live in the world of 8 bits).
+
+  How could it be done for the equivalent number in base 16?
+  Find out whether the following numbers are positive or negative, in the two's
+  complement interpretation in the world of 8 bits:
+
+  9.0   0x3
+    Example for solution: 0x3 = {0000 0011}_2. This number is positive because
+    the most significant bit (Number 8) is 0.
+  
+  9.1   0x35
+
+    ANSWER:
+
+    0x35 = {0011 0101}_2
+
+    Positive.
+
+  9.2   0xAB
+
+    0xAB = {1010 1011}_2
+
+    Negative.
+
+  9.3   0x77
+
+    0x77 = {0111 0111}_2
+
+    Positive.
+
+  9.4   0x7F
+
+    0x7F = {0111 1111}_2
+
+    Positive.
+
+  9.5   0x80
+
+    0x80 = {1000 0000}_2
+
+    Negative.
+

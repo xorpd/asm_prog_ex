@@ -1,0 +1,306 @@
+Base 2 Answers
+==============
+
+Base conversion exercises
+--------------------------
+
+0.  Binary to Decimal conversion. Convert the following numbers to base 10:
+
+    You may use a calculator if you feel like it, however please don't use the
+    built in conversion function. 
+
+    It is important that you do this yourself, to make sure that you get the
+    feeling of it. Some things could only be learned through the hands.
+
+  
+  0.0   {10}_2 = ?
+
+    ANSWER:
+     
+    {10}_2 = 2^0 * 0 + 2^1 * 1 = 2
+
+
+  0.1   {100}_2 = ?
+
+    ANSWER:
+
+    {100}_2 = 2^0 * 0 + 2^1 * 0 + 2^2 * 1 = 4
+
+  0.2   {101}_2 = ?
+
+    ANSWER:
+
+    {101}_2 = 2^0 * 1 + 2^1 * 0 + 2^2 * 1 = 5
+
+  0.3   {1001110}_2 = ?
+
+    ANSWER:
+
+    {1001110}_2 = 2^0 * 0 + 2^1 * 1 + 2^2 * 1 + 2^3 * 1 + 2^4 * 0 + 2^5 * 0 + 2^6 * 1 
+                = 0 + 2 + 4 + 8 + 0 + 0 + 64 
+                = 78
+
+  0.4   {100110011}_2 = ?
+
+    ANSWER:
+
+    {100110011}_2 = 2^0 * 1 + 2^1 * 1 + 2^2 * 0 + 2^3 * 0 + 2^4 * 1 + 2^5 * 1 + 2^6 * 0 + 2^7 * 0 + 2^8 * 1 
+                  = 1 + 2 + 0 + 0 + 16 + 32 + 0 + 0 + 256 
+                  = 307
+
+
+  0.5   {111111}_2 = ?
+
+    ANSWER:
+
+    {111111}_2 = 2^0 * 1 + 2^1 * 1 + 2^2 * 1 + 2^3 * 1 + 2^4 * 1 + 2^5 * 1 
+               = 1 + 2 + 4 + 8 + 16 + 32
+               = 63
+
+  0.6   {1000}_2 = ?
+
+    ANSWER:
+
+    {1000}_2 = 2^0 * 0 + 2^1 * 0 + 2^2 * 0 + 2^3 * 1
+             = 0 + 0 + 0 + 8
+             = 8
+
+  0.7   {10000}_2 = ? (Bonus: Could you guess this one? How?)
+
+    ANSWER:
+
+    Compared to the previous answer, this one is multiplied by 2. When multiplying a binary number by 2,
+    you simply shift all numbers to left and add a 0 to the right. So 8 * 2 = 16
+
+    {10000}_2 = 2^0 * 0 + 2^1 * 0 + 2^2 * 0 + 2^3 * 0 + 2^4 * 1 
+              = 0 + 0 + 0 + 0 + 16
+              = 16
+
+
+1.  Decimal to Binary conversion. Convert the following numbers to base 2:
+
+  1.0   {2}_10 = ?
+
+    ANSWER:
+
+    2 | 0
+    1 | 1
+
+    {2}_10 = {10}_2
+
+
+  1.1   {5}_10 = ?
+
+    ANSWER:
+
+    5 | 1
+    2 | 0
+    1 | 1
+
+    {5}_10 = {101}_2
+
+  1.2   {83}_10 = ?
+
+    ANSWER:
+
+    83 | 1
+    41 | 1
+    20 | 0
+    10 | 0
+     5 | 1
+     2 | 0
+     1 | 1
+
+    {83}_10 = {1010011}_2
+
+  1.3   {134}_10 = ?
+
+    ANSWER:
+
+    134 | 0
+     67 | 1
+     33 | 1
+     16 | 0
+      8 | 0
+      4 | 0
+      2 | 0
+      1 | 1
+
+    {134}_10 = {10000110}_2
+
+  1.4   {128}_10 = ?
+
+    ANSWER:
+
+    128 | 0
+     64 | 0
+     32 | 0
+     16 | 0
+      8 | 0
+      4 | 0
+      2 | 0
+      1 | 1
+
+    {128}_10 = {10000000}_2
+
+  1.5   {63}_10 = ?
+
+    ANSWER:
+
+    63 | 1
+    31 | 1
+    15 | 1
+     7 | 1
+     3 | 1
+     1 | 1
+
+    {63}_10 = {111111}_2
+
+  1.6   {256}_10 = ? (Bonus: Could you guess this one? How?)
+
+    ANSWER:
+
+    This would be answer 1.4 multiplied by 2. Multiplication by 2 means a bitshift to the right,
+    so probably the answer is 100000000.
+
+    256 | 0
+    128 | 0
+     64 | 0
+     32 | 0
+     16 | 0
+      8 | 0
+      4 | 0
+      2 | 0
+      1 | 1
+
+    {256}_10 = {100000000}_2
+
+
+2.  Conversion between various bases and 10:
+
+    Make sure that you pick a smart method to do the conversion in the following
+    exercises :)
+
+  2.0   {2312}_5 = {?}_10 ?
+
+    ANSWER:
+
+    {2312}_5 = 2 * 5^0 + 1 * 5^1 + 3 * 5^2 + 2 * 5^3
+             = 2 + 5 + 75 + 250
+             = 332
+
+  2.1   {10120}_3 = {?}_10 ?
+
+    ANSWER:
+
+    {10120}_3 = 0 * 3^0 + 2 * 3^1 + 1 * 3^2 + 0 * 3^3 + 1 * 3^4
+              = 0 + 6 + 9 + 0 + 81
+              = 96
+
+  2.2   {121}_10 = {?}_3 ?
+
+    ANSWER:
+
+    121 | 1
+     40 | 1
+     13 | 1
+      4 | 1
+      1 | 1
+
+    {121}_10 = {11111}_3
+
+  2.3   {121}_10 = {?}_6 ?
+
+    121 | 1
+     20 | 2
+      3 | 3
+
+    {121}_10 = {321}_6
+
+
+3. Conversion between two arbitrary bases.
+  
+    Convert the following numbers' representations.
+
+    Hint: Given that you know how to convert to base 10 and from base 10 easily,
+    you could just use base 10 as a mediator base.
+
+    Example: {102}_3 = {?}_5 ?
+
+    Solution:
+    First we convert from base 3 to base 10. 
+    We use Direct Evaluation method:
+
+    {102}_3 = 2*3^0 + 0*3^1 + 1*3^2 = 2 + 0 + 9 = {11}_10
+
+    Now we want to convert the result from base 10 to base 5. We use the
+    Remainder Evaluation method:
+
+    11 |  1    11 % 5 = 1
+     2 |  2     2 % 5 = 2
+
+    We obtain the number {21}_5. Hence {102}_3 = {21}_5
+
+  3.0   {10010}_2 = {?}_5 ?
+
+    ANSWER:
+
+    {10010}_2 = 0 * 2^0 + 1 * 2^1 + 0 * 2^2 + 0 * 2^3 + 1 * 2^4
+              = 0 + 2 + 0 + 0 + 16
+              = 18
+
+    18 | 3
+     3 | 3
+
+    {10010}_2 = {33}_5
+
+
+  3.1   {102}_3 = {?}_2 ?
+
+    ANSWER: 
+
+    {102}_3 = 2 * 3^0 + 0 * 3^1 + 1 * 3^2 
+            = 2 + 0 + 9
+            = 11
+
+    11 | 1
+     5 | 1
+     2 | 0
+     1 | 1
+
+    {102}_3 = {1011}_2
+
+  3.2   {11011}_2 = {?}_3 ?
+
+    ANSWER:
+
+    {11011}_2 = 1 * 2^0 + 1 * 2^1 + 0 * 2^2 + 1 * 2^3 + 1 * 2^4
+              = 1 + 2 + 0 + 8 + 16
+              = 27
+
+    27 | 0
+     9 | 0
+     3 | 0
+     1 | 1
+
+    {11011}_2 = {1000}_3
+
+  3.3   {1402}_5 = {?}_2 ?
+
+    ANSWER:
+
+    {1402}_5  = 2 * 5^0 + 0 * 5^1 + 4 * 5^2 + 1 * 5^3
+              = 2 + 0 + 100 + 125
+              = 227
+
+    227 | 1
+    113 | 1
+     56 | 0
+     28 | 0
+     14 | 0
+      7 | 1
+      3 | 1
+      1 | 1
+
+    {1402}_5 = {11100011}_2
+
