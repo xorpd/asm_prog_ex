@@ -79,7 +79,7 @@ expected.
     We define the lexicographic order as follows:
     For every two points (a,b), (c,d), we say that (a,b) < (c,d) if:
 
-    (a < c) or (a = b and b < d)
+    (a < c) or (a = c and b < d)
 
     This order is similar to the one you use when you look up words in the
     dictionary. The first letter has bigger significance than the second one,
