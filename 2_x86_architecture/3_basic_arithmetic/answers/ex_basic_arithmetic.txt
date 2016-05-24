@@ -1,0 +1,233 @@
+x86 Architecture Answers
+========================
+
+Note:
+For hexadecimal arithmetic we use a calculator.
+
+Read some code
+@@@@@@@@@@@@@@
+
+0.  Assume that the value of eax is 0x3. What is the new value of eax after the
+    execution of the following instructions:
+
+    inc   eax
+    dec   eax
+    inc   eax
+    inc   eax
+
+  ANSWER:
+
+    0x5
+
+1.  Assume that initially:
+    edx = 0x17, eax = 0x3, esi=0x7
+    What are the new values of edx,eax,esi after the execution of the following
+    instructions:
+
+    mul   esi
+    mul   esi
+    mul   si
+
+  ANSWER:
+
+    | edx       | eax       | esi
+    ----------------------------------
+    | 0x17      | 0x3       | 0x7
+    | 0x0       | 0x15      | 0x7       (0000 0003 * 0000 0007)
+    | 0x0       | 0x93      | 0x7       (0000 0015 * 0000 0007)
+    | 0x0       | 0x405     | 0x7       (0093 * 0007)
+
+2.  Given that:
+    edx = 0x0, eax = 0x1A, ecx = 0x3,
+    What are the new values of edx,eax,ecx after the execution of the following
+    instruction:
+
+    div   ecx
+
+  ANSWER:
+
+    | edx       | eax       | ecx
+    ----------------------------------
+    | 0x0       | 0x1A      | 0x3
+    | 0x2       | 0x8       | 0x3        (0000 0000 0000 001A / 0000 0003)
+
+
+3.  Given that edx = 0x0, eax=0xAAD, ecx = 0x0,
+    What is going to happen as a result of the execution of the following
+    instruction:
+
+    div   cx
+
+    Why?
+
+  ANSWER:
+
+    Division by zero is not possible.
+
+    The processor wil produce an error, which gives it to the operating system. The
+    operating system can choose how to handle it. In case of Windows it will gives us
+    an error notice.
+
+
+
+4.  Read the following code and answer the questions:
+
+  4.0   What does this piece of code do?
+  
+        mov   ecx,eax
+        mul   ecx
+        
+    ANSWER:
+
+      The value of eax is multiplied by eax. It is the same as the power of 2.
+
+  4.1   Bonus: What does this piece of code do? (Input: eax, Output: eax)?
+
+        mov   ecx,eax
+        mul   ecx
+        mov   esi,eax
+        add   ecx,ecx
+        add   esi,ecx
+        inc   esi
+        mov   eax,esi
+
+        - Could you do the same using less instructions?
+        - What happens if eax is very large?
+
+    ANSWER:
+
+      Let's try it with an example:
+
+                      | eax      | ecx      | esi
+                      ---------------------------------
+                      | 0x3      | ????     | ????
+        mov   ecx,eax | 0x3      | 0x3      | ????
+        mul   ecx     | 0x9      | 0x3      | ????
+        mov   esi,eax | 0x9      | 0x3      | 0x9
+        add   ecx,ecx | 0x9      | 0x6      | 0x9
+        add   esi,ecx | 0x9      | 0x6      | 0xF
+        inc   esi     | 0x9      | 0x6      | 0x10
+        mov   eax,esi | 0x10     | 0x6      | 0x10
+
+      It moves a few times in registers, but it does basically this:
+
+      f(x) = eax^2 + 2 * eax + 1
+
+      Yes, we can do it in less, when using only one other register to store eax.
+
+                      | eax      | ecx      
+                      ----------------------
+                      | 0x3      | ????
+        mov   ecx,eax | 0x3      | 0x3  
+        mul   eax     | 0x9      | 0x3   
+        add   eax,ecx | 0xC      | 0x3    
+        add   eax,ecx | 0xF      | 0x3     
+        inc   eax     | 0x10     | 0x3      
+
+      When eax is very large nothing specials happends with multiplication. When a 
+      number is too large to store inside the 32 bit eax register, the result gets 
+      wrapped to 32 bits.
+
+
+  4.2   Bonus: What does this piece of code do? (Input: eax, Output: eax)?
+        
+        mov   ecx,eax
+        inc   eax
+        dec   ecx
+        mul   ecx
+
+    ANSWER:
+
+      Again, let's try with an example
+
+                      | eax      | ecx    
+                      ----------------------
+                      | 0x3      | ???
+        mov   ecx,eax | 0x3      | 0x3
+        inc   eax     | 0x4      | 0x3
+        dec   ecx     | 0x4      | 0x2
+        mul   ecx     | 0x8      | 0x2          (0000 0002 * 0000 0004)
+
+      It does the following: f(x) = (eax - 1) * (eax + 1)
+
+
+Write some code
+@@@@@@@@@@@@@@@
+
+5.  
+  5.0   Write a piece of code that multiplies the numbers 1,2,3,4,5, and stores
+        the result inside eax.
+
+    ANSWER:
+
+      Since we cannot directly multiply with numbers, we need to store it in a register.
+      Use ecx as the counter.
+
+      mov eax, 1
+      mov ecx, 1
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+
+  5.1   Write a similar piece of code which multiplies the numbers 1,2,...,10
+        and stores the result inside eax.
+
+    ANSWER:
+
+      mov eax, 1
+      mov ecx, 1
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+      inc ecx
+      mul ecx
+
+6.  You are given three numbers eax=a, ebx=b, ecx=c. Write a piece of code that
+    calculates their average (a+b+c)/3, and stores it into eax.
+
+  ANSWER:
+
+    add eax, ebx
+    add eax, ecx
+    mov esi, 3
+    div esi
+
+
+7.  Bonus: You are given eax=a, ebx=b. Calculate (a^3)*b + 5*(b^2), and store
+    the result inside eax. (Here * means multiplication, and c^d means c to the
+    power of d).
+
+  ANSWER:
+
+    Calculate the first term in eax. Then move eax temporarily to ecx and use eax 
+    to calculate ebx and the second term. Then add ecx to eax.
+
+    mul eax       ; eax * eax
+    mul eax       ; eax * eax
+    mul ebx       ; ebx * eax
+    mov ecx, eax  ; store the result temporarily in ecx
+    mov eax, ebx  ; move ebx to eax so we can use mul
+    mul eax       ; eax * eax
+    mov ebx, 5    ; use ebx to store 5
+    mul ebx       ; ebx * eax
+    add eax, ecx  ; ecx + eax

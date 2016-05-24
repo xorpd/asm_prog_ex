@@ -1,0 +1,174 @@
+x86 Architecture Answers
+========================
+
+Read some code
+@@@@@@@@@@@@@@
+
+0.  You are given the initial values of the following registers:
+    eax = 0x00000011 , ebx = 0x1234ABCD , ecx = 0x5151DEAD
+
+    Find out the final values of eax, ebx and ecx after running the following
+    instructions:
+
+    mov   ah,5Bh
+    mov   cx,0BEEFh
+    mov   ebx,ecx
+    mov   ah,bl
+
+  ANSWER:
+
+    | eax       | ebx       | ecx
+    -----------------------------------
+    | 0000 0011 | 1234 ABCD | 5151 DEAD
+    |
+    | 0000 5B11 | 1234 ABCD | 5151 DEAD
+    | 0000 5B11 | 1234 ABCD | 5151 BEEF
+    | 0000 5B11 | 5151 BEEF | 5151 BEEF
+    | 0000 EF11 | 5151 BEEF | 5151 BEEF
+
+1.  The initial value of eax is 0x1. What is the value of eax after running the
+    following instructions?
+
+    add   eax,1
+    add   eax,eax
+    add   eax,eax
+
+  ANSWER:
+
+    | eax     
+    -----------
+    | 0000 0001
+    |
+    | 0000 0002
+    | 0000 0004
+    | 0000 0008
+
+2.  The initial value of eax is 0x5. What is the value of eax after running the
+    following instructions?
+
+    mov   ecx,eax
+    add   ecx,ecx
+    add   ecx,eax
+    add   ecx,3h
+    mov   eax,ecx
+
+  ANSWER:
+
+    | eax       | ecx
+    -----------------------
+    | 0000 0005 | ???? ????
+    |
+    | 0000 0005 | 0000 0005
+    | 0000 0005 | 0000 000A
+    | 0000 0005 | 0000 000F
+    | 0000 0005 | 0000 0012
+    | 0000 0012 | 0000 0012
+
+
+3.  What does the following piece of code does? Assume that the input of this
+    code is eax, and the output is eax.
+
+    mov   edx,eax
+    add   edx,edx
+    add   edx,edx
+    add   edx,edx
+    sub   edx,eax
+    mov   eax,edx
+
+  ANSWER:
+
+    Look at what happends. Take an arbitrary value: 0x2.
+
+    | eax       | edx
+    -----------------------
+    | ???? ???2 | ???? ????
+    |
+    | ???? ???2 | ???? ???2
+    | ???? ???2 | ???? ???4
+    | ???? ???2 | ???? ???8
+    | ???? ???2 | ???? ??10
+    | ???? ???2 | ???? ???E
+    | ???? ???E | ???? ???E
+
+    Look at what happends. Take an arbitrary value: 0x1.
+
+    | eax       | edx
+    -----------------------
+    | ???? ???1 | ???? ????
+    |
+    | ???? ???1 | ???? ???1
+    | ???? ???1 | ???? ???2
+    | ???? ???1 | ???? ???4
+    | ???? ???1 | ???? ???8
+    | ???? ???1 | ???? ???7
+    | ???? ???7 | ???? ???7
+
+    It looks like these are multiples of 7. Input of 2 in decimal gives 14 in 
+    decimal. The input of 1 in decimal gives 7 in decimal. And so on.
+
+Write some code
+@@@@@@@@@@@@@@@
+
+4.  Assume that you are given values in eax,ebx,ecx. Write code that adds the
+    values inside all those registers, and stores the final result inside edx.
+
+  ANSWER:
+
+    mov edx,eax
+    add edx,ebx
+    add edx,ecx
+
+5.  Bonus: Write a piece of code that copies the number inside al (Only 8 bits)
+    into whole edx, so that the value inside edx will be equal to the value
+    inside the original al. Hint: You will have to somehow pad with zeroes the
+    original value.
+
+    Example: Assume that Initially eax = 0x153BCF19. When your code will end its
+    running, I expect that edx = 0x00000019
+
+  ANSWER:
+
+    Clear edx using sub from itself.
+
+    sub edx,edx
+    mov dl,al
+
+6.  Bonus: Assume that you are given values in eax,ecx. Write a piece of code
+    that calculates 5*eax + 3*ecx + 1, and stores the result inside eax. (*
+    means multiplication here).
+
+  ANSWER:
+
+    Use ebx to store the initial value.
+
+    mov ebx,eax
+    add eax,ebx
+    add eax,ebx
+    add eax,ebx
+    add eax,ebx
+    mov ebx,ecx
+    add eax,ebx
+    add eax,ebx
+    add eax,ebx
+    add eax,1
+
+7.  Bonus: You are given eax = 0x1. Could you zero eax using only ADD
+    instructions? What is the lowest number of ADD instructions that you need to
+    use to acheive that result.
+
+  ANSWER:
+
+    Yes, the lowest numbers is 1.
+
+    add eax,FFFFFFFF
+
+8.  Bonus: Could you calculate eax * eax (eax times eax) using only MOV,ADD,SUB
+    instructions?
+
+  ANSWER:
+
+    We can build a loop that takes the initial value of eax and stores it. Then it
+    adds eax a number of times. The problem is that we have to instruct the program
+    when it needs to stop adding. This can only done by conditional opcodes.
+
+    So the answer is no.
