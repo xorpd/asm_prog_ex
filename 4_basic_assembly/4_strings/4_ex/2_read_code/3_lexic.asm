@@ -52,7 +52,7 @@ start:
     call    read_line
 
     ; Please enter second string:
-    mov     esi,enter_first
+    mov     esi,enter_second
     call    print_str
 
     ; Read second string from user:
