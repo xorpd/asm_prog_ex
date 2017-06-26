@@ -222,12 +222,13 @@ Write some code
     Calculate the first term in eax. Then move eax temporarily to ecx and use eax 
     to calculate ebx and the second term. Then add ecx to eax.
 
-    mul eax       ; eax * eax
-    mul eax       ; eax * eax
-    mul ebx       ; ebx * eax
-    mov ecx, eax  ; store the result temporarily in ecx
-    mov eax, ebx  ; move ebx to eax so we can use mul
-    mul eax       ; eax * eax
-    mov ebx, 5    ; use ebx to store 5
-    mul ebx       ; ebx * eax
-    add eax, ecx  ; ecx + eax
+    mov ecx, eax  ; ecx <- a
+    mul eax;      ; eax <- a^2
+    mul ecx;      ; eax <- a^3
+    mul ebx       ; eax <- a^3 * b
+    mov ecx, eax  ; ecx <- a^3 * b
+    mov eax, ebx  ; eax <- b
+    mul eax       ; eax <- b^2
+    mov ebx, 5    ; ebx <- 5
+    mul ebx       ; eax <- 5*b
+    add eax, ecx  ; eax <- 5 * b + a^3 * b
