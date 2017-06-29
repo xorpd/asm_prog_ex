@@ -34,7 +34,7 @@ The ten's complement
 
     ANSWER:
 
-    868 + 1 = -867
+    868 + 1 = -869
 
 1.  Solve the following using the ten's complement method:
     (Note: We are working in base 10 here.)
