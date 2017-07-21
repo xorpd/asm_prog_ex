@@ -36,7 +36,7 @@ next_x:
 	jnz   loop_x 		; if x !== y
 
 next_y:
-	inc 	edm
+	inc 	edx
 
 	cmp 	edx, ebx
 	jnz   loop_y 		; if y !== n
