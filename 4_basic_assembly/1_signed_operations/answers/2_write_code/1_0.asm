@@ -24,7 +24,7 @@ start:
 	call 	read_hex
 
 	neg		eax
-	sub		eax, 1
+	dec 	eax
 
 	call 	print_eax
 
