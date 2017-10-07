@@ -14,9 +14,8 @@ read_hex:
     ; Keep some room for locals:
     sub     esp,16+4
 
-    push    ebx
     push    ecx
-    push    edx
+    push    edi
     
     lea     edi,[ebp + .read_hex_buffer]
     mov     ecx,.MAX_BYTES_TO_READ
@@ -37,9 +36,8 @@ read_hex:
     add     esp,4*3
 
     ; Result is inside eax.
-    pop     edx
+    pop     edi
     pop     ecx
-    pop     ebx
 
     add     esp,16+4
     pop     ebp
