@@ -14,6 +14,8 @@ read_hex:
     ; Keep some room for locals:
     sub     esp,16+4
 
+    push    edx
+    push    ebx
     push    ecx
     push    edi
     
@@ -38,6 +40,8 @@ read_hex:
     ; Result is inside eax.
     pop     edi
     pop     ecx
+    push    ebx
+    pop     edx
 
     add     esp,16+4
     pop     ebp
