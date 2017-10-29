@@ -129,6 +129,15 @@ Read some code
       wrapped to 32 bits.
 
 
+      An even shorter solution is as follows:
+
+      inc  eax
+      mul  eax
+
+      This works because (eax + 1)*(eax + 1) = eax^2 + 2 * eax + 1
+
+
+
   4.2   Bonus: What does this piece of code do? (Input: eax, Output: eax)?
         
         mov   ecx,eax
