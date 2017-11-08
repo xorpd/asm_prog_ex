@@ -40,7 +40,7 @@ read_hex:
     ; Result is inside eax.
     pop     edi
     pop     ecx
-    push    ebx
+    pop     ebx
     pop     edx
 
     add     esp,16+4
