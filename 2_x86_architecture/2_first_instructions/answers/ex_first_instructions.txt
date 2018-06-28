@@ -152,6 +152,14 @@ Write some code
     add eax,ebx
     add eax,1
 
+    An alternative answer:
+
+    add ecx, eax
+    add eax, ecx
+    add eax, eax
+    add eax, ecx
+    add eax, 0x1
+
 7.  Bonus: You are given eax = 0x1. Could you zero eax using only ADD
     instructions? What is the lowest number of ADD instructions that you need to
     use to acheive that result.

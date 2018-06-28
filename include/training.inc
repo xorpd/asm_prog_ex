@@ -122,10 +122,14 @@ print_delimiter:
 ; Print the string pointed by esi to the console.
 ; The string must be null terminated.
 print_str:
+    jmp     .print_str_after_data
+    .safeFormatString db "%s",0
+.print_str_after_data:
     pushad      ; Keep all registers.
     push    esi
+    push    .safeFormatString
     call    [printf]
-    add     esp,4
+    add     esp,8
     popad           ; Restore all registers.
     ret
 
