@@ -31,7 +31,7 @@ start:
 
     call    read_hex
     mov     ecx,32d
-    mov     edx,0
+    xor     edx,edx
 
 ; count the number of ones in a number
 sum_bits:
@@ -42,11 +42,11 @@ sum_bits:
     loop    sum_bits
 
 ; calculate the sum of all 1 distances
-    mov     ebx,edx
+    mov     ebx,edx     ; ebx is remaining 1 bits to check
     mov     ecx,32d
-    mov     edx,0
-    mov     esi,0
-    mov     edi,0
+    xor     edx,edx     ; the previous position of 1
+    xor     esi,esi     ; the index
+    xor     edi,edi     ; contains the sequential sums
 
 rotate:
     shl     eax,1

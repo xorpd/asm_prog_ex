@@ -30,17 +30,9 @@ start:
     xor     eax,ebx
 
     and     eax,1
-    jz      even
-    mov     eax,1
-    jmp     exit
-
-even:
-    mov     eax,0
-
-exit:    
     call    print_eax
 
-    push	0
-    call	[ExitProcess]
+    push    0
+    call    [ExitProcess]
 
 include 'training.inc'

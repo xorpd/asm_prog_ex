@@ -24,14 +24,16 @@
 ;     5.1   rol   bx,19d
 ;
 ;     A1: It assembles.
-;     A2: It rotates the bits to the left with k=19 in decimal.
+;     A2: It rotates the bits to the left with k=19 in decimal. As 19-16=3,
+;         it rotates bx 3 bits to the left.
 ;         Only the last 16 (bx) bits get rotated, the first sixteen 
 ;         bits remain intact.
 ;
 ;     5.2   ror   dh,10d
 ;
 ;     A1: It assembles.
-;     A2: It rotates the bits to the right with k=10 in decimal. 
+;     A2: It rotates the bits to the right with k=10 in decimal.  Since 10-8=2,
+;         it rotates dh 2 bits to the right.
 ;         The last 8 bits (dl) and the firts 16 bits remain intact, 
 ;         dh gets rotated.
 ;

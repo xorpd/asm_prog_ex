@@ -29,23 +29,19 @@ start:
 
     call    read_hex
     ; mov     eax,01001111b
-    mov     ecx,31d
+    mov     ecx,32d
     xor     ebx,ebx
-    xor     esi,esi
 
 rotate:
-    mov     ebx,1
-    and     ebx,eax
-    add     esi,ebx
-    ror     eax,1
-    shl     esi,1
+    rcr     eax,1       ; shift LSB into the carry bit
+    rcl     ebx,1       ; move that carry bit into LSB and shift the others up
     loop    rotate
 
-    mov     eax,esi
+    mov     eax,ebx
     call    print_eax
 
     ; Exit the process:
-    push	0
-    call	[ExitProcess]
+    push    0
+    call    [ExitProcess]
 
 include 'training.inc'

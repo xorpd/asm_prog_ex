@@ -50,23 +50,19 @@ start:
     call    read_hex
     mov     ebx,eax
     call    read_hex
-    mov     edx,eax
-
-    xor     eax,ebx         ; save xor (add) in eax
-    and     ebx,edx         ; save and (carry) in ebx
     mov     ecx,32d
 
 l1:
+    mov     edx,eax
+    xor     eax,ebx         ; save xor (add) in eax
+    and     ebx,edx         ; save and (carry) in ebx
     shl     ebx,1           ; shift carry left
-    mov     edx,eax   
-    xor     eax,ebx         ; save new xor in eax
-    and     ebx,edx         ; save new carry in ebx
     loop    l1
 
     call    print_eax
     
     ; Exit the process:
-    push	0
-    call	[ExitProcess]
+    push    0
+    call    [ExitProcess]
 
 include 'training.inc'

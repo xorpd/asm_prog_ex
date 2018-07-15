@@ -27,7 +27,7 @@ section '.text' code readable executable
 start:
 
     call    read_hex
-    mov     edx,0
+    xor     edx,edx
     mov     ecx,16d
 
 sum_bits:
@@ -41,7 +41,7 @@ sum_bits:
     call    print_eax
 
     ; Exit the process:
-    push	0
-    call	[ExitProcess]
+    push    0
+    call    [ExitProcess]
 
 include 'training.inc'

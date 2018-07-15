@@ -22,19 +22,22 @@ section '.text' code readable executable
 start:
 
     call    read_hex
-	mov 	ebx,eax
-	sub 	ebx,1
-	and 	eax,ebx
-	
+    cmp     eax,0     ; make sure that x != 0 
+    jz      exit
+
+    mov     ebx,eax
+    sub     ebx,1
+    and     eax,ebx
+
 compare:
-	cmp 	eax,0
-	jz		pow2
-	mov 	eax,0
-	jmp 	exit
-	
+    cmp     eax,0
+    jz      pow2
+    mov     eax,0
+    jmp     exit
+
 pow2:
-	mov 	eax,1
-	
+    mov     eax,1
+
 exit:
     call    print_eax
 

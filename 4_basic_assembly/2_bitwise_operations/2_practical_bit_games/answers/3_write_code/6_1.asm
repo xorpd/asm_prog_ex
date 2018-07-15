@@ -35,7 +35,7 @@ section '.text' code readable executable
 
 start:
 
-	call 	read_hex
+    call    read_hex
     mov     ecx,32d
     xor     ebx,ebx
 
