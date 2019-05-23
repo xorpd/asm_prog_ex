@@ -121,7 +121,7 @@ following material, however it will probably make you smarter.
 
       During the representation we mentioned that every quantity could be
       represented in a unique way in base 2. That means: Every quantity could be
-      represented as a sum of distinct powers of 2 in a unique way. prove it.
+      represented as a sum of distinct powers of 2 in a unique way. Prove it.
 
       Generally: Let b be some base for b > 1. Show that for any quantity
       q, there is only one way to represent q in base b.
@@ -129,7 +129,7 @@ following material, however it will probably make you smarter.
       Hint for b=2:
       Assume that there are two different representations as sums of distinct
       powers of 2 for the same quantity q. Then we get:
-      2^(a_0) + 2^(a_1) + ... = q = 2^(b_0) + 2^(b_1) + ...
+      a0 * 2^0 + a1 * 2^1 + ... = q = b0 * 2^0 + b1 * 2^1 + ...
       Cancel the similar terms from the two sides of the equation, and try to
       understand if equality is possible.
 
