@@ -11,7 +11,7 @@ Read some code
     instructions:
 
     mov   ah,5Bh
-    mov   cx,0BEEFh
+    mov   cx,0BEEFh ;here 0BEEFh is hexadecimal. likewise the number 10 can be written as 10d (decimal)
     mov   ebx,ecx
     mov   ah,bl
 
