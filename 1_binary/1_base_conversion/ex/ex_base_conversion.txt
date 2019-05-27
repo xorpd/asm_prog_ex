@@ -129,7 +129,7 @@ following material, however it will probably make you smarter.
       Hint for b=2:
       Assume that there are two different representations as sums of distinct
       powers of 2 for the same quantity q. Then we get:
-      a0 * 2^0 + a1 * 2^1 + ... = q = b0 * 2^0 + b1 * 2^1 + ...
+      2^(a_0) + 2^(a_1) + ... = q = 2^(b_0) + 2^(b_1) + ...
       Cancel the similar terms from the two sides of the equation, and try to
       understand if equality is possible.
 
