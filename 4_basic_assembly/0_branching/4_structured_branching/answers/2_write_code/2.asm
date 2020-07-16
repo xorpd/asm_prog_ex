@@ -30,19 +30,16 @@ start:
 	mov		esi, 0		; used to add a^2 and b^2
 
 calculate:
-	mov		edx, 0
 	mov		eax, 0
 	mov   al, ch
 	mul   eax       ; a^2
 	mov		esi, eax	; store a^2 in esi
 
-	mov		edx, 0
 	mov		eax, 0
 	mov		al, bl
 	mul   eax       ; b^2
 	add		esi, eax	; a^2 + b^2
 
-	mov		edx, 0
 	mov		eax, 0
 	mov		al, bh
 	mul 	eax			; c^2 in eax
