@@ -1,4 +1,4 @@
-; 0.
+                                     ; 0.
 ;   0.1 Write a program that does the same, except that it multiplies the four
 ;       bytes. (All the bytes are considered to be unsigned).
 ;
@@ -12,46 +12,46 @@
 format PE console
 entry start
 
-include 'win32a.inc'
+include 'win32ax.inc'
 
 ; ===============================================
 section '.text' code readable executable
-
 start:
+      call read_hex
+      mov edi, eax
 
-    call    read_hex
+      ;right word shift
+      mov esi, 65536
 
-    mov     esi, 65536  ; the divisor
-    mov     ecx, eax    ; copy of the user input
-    sub     ebx, ebx    ; temp register to isolate the 8 bit registers in
-    sub     edi, edi    ; answer register
+      ;cleared registers for isolating the params
+      mov ebx, 0              
+      mov edx, 0
+      ;result
+      mov ecx, 0
 
-    sub     edx, edx    ; clear mul registers
-    sub     eax, eax    ; clear mul registers
-    mov     al, cl      ; param 1 to eax
-    mov     bl, ch      ; param 2 to ebx
+      ;lower word
+      mov bl, al              
+      movzx eax , ah  ;clear eax since it still has part of the input
+      mul ebx                 
+      mov ecx, eax
 
-    mul     ebx         ; param 1 * param 2
+      mov edx, 0
+      ;restore original value of eax
+      mov eax, edi
+      div esi                   
 
-    mov     edi, eax    ; store the result temp. in edi
-    mov     eax, ecx    ; user input back in eax
-    div     esi
+      ;now treat the higher word which was just shifted to the lower
+      mov bl, al
+      movzx eax, ah        
+      mul ebx         
 
-    mov     ecx, eax    ; shifted user input to ebx
-    mov     eax, edi    ; multiplication result back to eax
-    mov     edx, 0      ; clear edx
-    mov     ebx, 0      ; clear ebx
+      ;(param1 * param2) * (param3 * param4)
+      mul ecx
 
-    mov     bl, cl
-    mul     ebx         ; (param 1 * param 2) * param 3
+      call print_eax
 
-    mov     bl, ch
-    mul     ebx         ; (param 1 * param 2 * param 3) * param 4
-
-    call    print_eax
-
-    ; Exit the process:
-    push    0
-    call    [ExitProcess]
-
+      ; Exit the process:
+      push 0
+      call [ExitProcess]
+        
 include 'training.inc'
