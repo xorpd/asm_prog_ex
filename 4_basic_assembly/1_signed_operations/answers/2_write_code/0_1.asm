@@ -12,46 +12,48 @@
 format PE console
 entry start
 
-include 'win32ax.inc'
+include 'win32a.inc'
 
 ; ===============================================
 section '.text' code readable executable
 start:
-      call read_hex
-      mov edi, eax
+      call  read_hex
+      mov   edi, eax
 
-      ;right word shift
-      mov esi, 65536
-
-      ;cleared registers for isolating the params
-      mov ebx, 0              
-      mov edx, 0
+      ; cleared registers for isolating the params
+      mov   ebx, 0  
+      ; same as above but takes less bytes
+      xor   edx, edx
       ;result
-      mov ecx, 0
+      mov   ecx, 0
 
-      ;lower word
-      mov bl, al              
-      movzx eax , ah  ;clear eax since it still has part of the input
-      mul ebx                 
-      mov ecx, eax
+      ; Treat the lower word
+      mov   bl, al              
+      movzx eax , ah  ; clear eax since it still has part of the input
+      mul   ebx                 
+      mov   ecx, eax
 
-      mov edx, 0
-      ;restore original value of eax
-      mov eax, edi
-      div esi                   
+      mov   edx, 0
+      ;restore the original value of eax
+      mov   eax, edi
+      ;right word shift
+      mov   esi, 65536
+      
+      div   esi                   
 
       ;now treat the higher word which was just shifted to the lower
-      mov bl, al
+      mov   bl, al
       movzx eax, ah        
-      mul ebx         
+      mul   ebx         
 
       ;(param1 * param2) * (param3 * param4)
-      mul ecx
-
-      call print_eax
+      mul   ecx
+      
+      ;print eax
+      call  print_eax
 
       ; Exit the process:
-      push 0
-      call [ExitProcess]
+      push  0
+      call  [ExitProcess]
         
 include 'training.inc'
