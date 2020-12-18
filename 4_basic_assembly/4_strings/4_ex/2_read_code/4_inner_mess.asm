@@ -84,8 +84,7 @@ string_not_empty:
     mov     ecx,dword [slen]
     mov     al,'['
     repnz scasb
-
-    dec     edi
+    
     mov     dword [first_b],edi
 
     ; Find the last bracket:
@@ -113,7 +112,6 @@ string_not_empty:
 
     ; Start printing right after the first bracket:
     mov     esi,dword [first_b]
-    inc     esi
     
     call    print_str
 
