@@ -40,7 +40,7 @@ section '.data' data readable writeable
 
 ; ===============================================
 section '.bss' readable writeable
-    first_b     dd      ?
+    after_first_b     dd      ?
     last_b      dd      ?
     slen        dd      ?
 
@@ -85,8 +85,7 @@ string_not_empty:
     mov     al,'['
     repnz scasb
 
-    dec     edi
-    mov     dword [first_b],edi
+    mov     dword [after_first_b],edi
 
     ; Find the last bracket:
     mov     edi,user_text
@@ -112,8 +111,7 @@ string_not_empty:
     stosb
 
     ; Start printing right after the first bracket:
-    mov     esi,dword [first_b]
-    inc     esi
+    mov     esi,dword [after_first_b]
     
     call    print_str
 
