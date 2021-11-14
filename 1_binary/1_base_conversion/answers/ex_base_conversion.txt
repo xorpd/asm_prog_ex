@@ -160,7 +160,7 @@ Base conversion exercises
 
     ANSWER:
 
-    This would be answer 1.4 multiplied by 2. Multiplication by 2 means a bitshift to the right,
+    This would be answer 1.4 multiplied by 2. Multiplication by 2 means a bitshift to the left,
     so probably the answer is 100000000.
 
     256 | 0
