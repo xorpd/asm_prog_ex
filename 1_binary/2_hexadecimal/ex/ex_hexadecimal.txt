@@ -30,7 +30,7 @@ exercises, make sure that you do them with a pen and a paper.
 
   0.3   0x4532 = {?}_2
 
-  0.4   0x9A9B = {?}_?
+  0.4   0x9A9B = {?}_2
 
 
 1. Convert the following binary numbers to base 16:
