@@ -239,5 +239,5 @@ Write some code
     mov eax, ebx  ; eax <- b
     mul eax       ; eax <- b^2
     mov ebx, 5    ; ebx <- 5
-    mul ebx       ; eax <- 5*b
-    add eax, ecx  ; eax <- 5 * b + a^3 * b
+    mul ebx       ; eax <- 5 * b^2
+    add eax, ecx  ; eax <- 5 * b^2 + a^3 * b
