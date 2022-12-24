@@ -33,8 +33,8 @@
 ;	ANSWER:
 ;
 ;		It takes 1 input of max ffffh. If it is below or equal to ffffh, the first
-;		nibble is sign extended (so numbers below 0 are kept intact) and the
-;		second nibble is zero extended (treated as a unsigned number). Those numbers
+;		byte is sign extended (so numbers below 0 are kept intact) and the
+;		second byte is zero extended (treated as a unsigned number). Those numbers
 ;		are multiplied and the result is printed. If the number is above ffffh, the
 ;		number is directly printed back.
 ;
